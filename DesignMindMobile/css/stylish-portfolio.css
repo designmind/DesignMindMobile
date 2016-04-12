@@ -173,12 +173,24 @@ hr.small {
     -o-background-size: cover;
 }
 
+.headersmall {
+    display: table;
+    position: relative;
+    width: 100%;
+
+    background: url(../img/Final_Image_1.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .header2 {
     display: table;
     position: relative;
     width: 100%;
 
-    background: url(../img/Final_Image_2_2X.png) no-repeat center center scroll;
+    background: url(../img/Final_Image_2_2X.png) no-repeat center center ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -196,6 +208,18 @@ hr.small {
     margin-right: 0;
     font-weight: lighter;
     padding-top:100px;
+}
+
+.headertext-h1-small{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 45px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    padding-top:60px;
 }
 
 .headertext-h1-white{
@@ -225,6 +249,19 @@ hr.small {
     word-wrap: break-word;
 }
 
+.headertext-center-small{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 19px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom:40px;
+    /*padding-top:60px;*/
+    word-wrap: break-word;
+}
+
 .headertext-center-white{
     font-family:'Source Sans Pro';
     display: block;
@@ -249,6 +286,17 @@ hr.small {
     padding-right:100px;
     margin-bottom:120px;
 }
+
+.header-btn-small {
+    color:#FFFFFF; 
+    background-color:#F18B22; 
+    font-size:29px; 
+    padding-top:25px;
+    padding-bottom:25px;
+    padding-left:100px; 
+    padding-right:100px;
+    margin-bottom:40px;
+}
 .text {
     font-family:'Source Sans Pro';
 }
@@ -261,6 +309,15 @@ hr.small {
 
 .border {
     border:1px;
+    border-color:#2558A9
+}
+
+hr-custom { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
     border-color:#2558A9
 }
 
