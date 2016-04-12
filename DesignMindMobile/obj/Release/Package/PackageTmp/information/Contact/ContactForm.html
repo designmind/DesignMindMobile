@@ -1,0 +1,38 @@
+﻿<?php
+if(isset($_POST['submit'])){
+    $to = "mobile@designmind.com";
+    $from = $_POST['cf_email']; 
+    $full_name = $_POST['cf_name'];
+    $comments = $_POST['comments'];
+    $subject = "Mobile Inquiry";
+    $subject2 = "Copy of your Mobile Inquiry";
+    $message = $full_name. " wrote the following:" . "\n\n" . $_POST['comments'];
+    $message2 = "Here is a copy of your message " . $full_name . "\n\n" . $_POST['comments'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form submission</title>
+</head>
+<body>
+    <form action="" method="post" enctype="text/plain">
+        Your name<br>
+        <input type="text" name="cf_name"><br />
+        Your e-mail<br>
+        <input type="text" name="cf_email"><br />
+        Message<br />
+        <textarea name="comments" cols="30" rows="4"></textarea>
+        <br />
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+</body>
+</html>
