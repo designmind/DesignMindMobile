@@ -9,7 +9,7 @@
 html,
 body {
     width: 100%;
-    height: 800px;
+    height: 100%;
 }
 
 body {
@@ -154,12 +154,13 @@ hr.small {
 .navbar-text-new {
   /*margin-top: 15px;*/
   margin-bottom: 15px;
+  text-align:center;
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .navbar-text-new {
     text-align:center;
   }
-}
+}*/
 
 .header {
     display: table;
