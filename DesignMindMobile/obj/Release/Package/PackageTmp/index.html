@@ -73,7 +73,7 @@
                 Responsive/ Hybrid and Xamarin Applications with our complete mobile <br/> solutions agency.
              With a library of functions and industry experts in <br />Middleware and data we are the complete solution provider.</div>
             <br>
-            <a href="#about" class="btn btn-lg text header-btn">Get Started</a>
+            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
         </div>
     </div>
 
@@ -86,7 +86,7 @@
                 With a library of functions<br /> and industry experts in <br />Middleware and data we are the complete solution provider.
             </div>
             <br>
-            <a href="#about" class="btn btn-lg text header-btn-small">Get Started</a>
+            <button type="button" id="myBtn" class="btn btn-lg text header-btn-small">Get Started</button>
         </div>
     </div>
 
@@ -123,11 +123,77 @@
             </div>
         </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="text"> Develop your mobile applications with DesignMind</h3>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Comments"></textarea>
+                        </div><button type="submit" id="emailSubmit" class="btn btn-default btn-warning btn-block">Send</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+
+
+            $("#emailSubmit").click(function () {
+                var name = $("#name").val()
+                var email = $("#email").val()
+                var message = $("#message").val()
+                var response = $.ajax({
+                    url: "https://api.mailgun.net/v3/sandbox74d630e120154879905503cf3b4b67fc.mailgun.org/messages",
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Basic " + btoa("api:key-59ddd5a6c2e9433eea197a00cb78c94c"),
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    data: {
+                        from: 'kimate@hotmail.com',
+                        to: 'mobile@designmind.com',
+                        subject: 'Web Inquiry',
+                        body: name + " " + email + " " + message
+                    },
+                    // cache: false,
+                    success: function () {
+                        alert('message sent');
+                    },
+                    error: function () {
+                    }
+                })
+                
+            });
+
+        });
+    </script>
 
 </body>
 

@@ -143,7 +143,7 @@
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" id="message" rows="5" placeholder="Comments"></textarea>
-                        </div><button type="submit" class="btn btn-default btn-warning btn-block">Send</button>
+                        </div><button type="submit" id="emailSubmit" class="btn btn-default btn-warning btn-block">Send</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -159,11 +159,40 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-        $("#myModal").modal();
-    });
-});
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+
+
+            $("#emailSubmit").click(function () {
+                var name = $("#name").val()
+                var email = $("#email").val()
+                var message = $("#message").val()
+                var response = $.ajax({
+                    url: "https://api.mailgun.net/v3/sandbox74d630e120154879905503cf3b4b67fc.mailgun.org/messages",
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Basic " + btoa("api:key-59ddd5a6c2e9433eea197a00cb78c94c"),
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    data: {
+                        from: 'kimate@hotmail.com',
+                        to: 'mobile@designmind.com',
+                        subject: 'Web Inquiry',
+                        body: name + " " + email + " " + message
+                    },
+                    // cache: false,
+                    success: function () {
+                        alert('message sent');
+                    },
+                    error: function () {
+                    }
+                })
+                
+            });
+
+        });
     </script>
 
 </body>
