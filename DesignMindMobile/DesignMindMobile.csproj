@@ -99,10 +99,13 @@
     <Content Include="img\example-slide-2.jpg" />
     <Content Include="img\example-slide-3.jpg" />
     <Content Include="img\example-slide-4.jpg" />
+    <Content Include="img\Facebook_Icon.png" />
     <Content Include="img\Final_Image_1.png" />
     <Content Include="img\Final_Image_1_2X.png" />
     <Content Include="img\Final_Image_2.png" />
     <Content Include="img\Final_Image_2_2X.png" />
+    <Content Include="img\LinkedIn_Icon.png" />
+    <Content Include="img\Twitter_Icon.png" />
     <Content Include="index.html" />
     <Content Include="index2.html" />
     <Content Include="information\Contact\ContactForm.html" />
