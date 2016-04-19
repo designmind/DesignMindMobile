@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Communications_Icon.svg" />
+    <Content Include="img\Delivery_Icon.svg" />
     <Content Include="img\DMMobileLogo.png" />
     <Content Include="img\example-slide-1.jpg" />
     <Content Include="img\example-slide-2.jpg" />
@@ -105,6 +107,9 @@
     <Content Include="img\Final_Image_2.png" />
     <Content Include="img\Final_Image_2_2X.png" />
     <Content Include="img\LinkedIn_Icon.png" />
+    <Content Include="img\Location_Icon.svg" />
+    <Content Include="img\MobileData_Icon.svg" />
+    <Content Include="img\Security_Icon.svg" />
     <Content Include="img\Twitter_Icon.png" />
     <Content Include="index.html" />
     <Content Include="index2.html" />
