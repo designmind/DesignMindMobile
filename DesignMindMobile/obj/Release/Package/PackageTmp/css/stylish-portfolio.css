@@ -211,6 +211,32 @@ hr.small {
     padding-top:100px;
 }
 
+.acceleratortext-h1{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 60px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    padding-top:25px;
+    color: #373737;
+}
+
+.acceleratortext-h1-small{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 45px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: lighter;
+    padding-top:15px;
+    color: #373737;
+}
+
 .headertext-h1-small{
     font-family:'Source Sans Pro';
     display: block;
@@ -220,7 +246,7 @@ hr.small {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    padding-top:60px;
+    padding-top:100px;
 }
 
 .headertext-h1-white{
@@ -248,6 +274,34 @@ hr.small {
     padding-bottom:60px;
     /*padding-top:60px;*/
     word-wrap: break-word;
+}
+
+.accelerator-center{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 17px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom:20px;
+
+    word-wrap: break-word;
+    color: #373737;
+}
+
+.accelerator-center-small{
+    font-family:'Source Sans Pro';
+    display: block;
+    font-size: 17px;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom:10px;
+
+    word-wrap: break-word;
+    color: #373737;
 }
 
 .headertext-center-small{
@@ -307,6 +361,54 @@ hr.small {
     color:white;
 }
 
+.accelerator-h3 {
+    font-size:38px;
+    color:#373737;
+    font-weight:lighter;
+}
+
+.accelerator-text-orange {
+    font-size:20px;
+    font-weight:400;
+    color:#faae64;
+    padding-bottom: 40px;
+}
+
+.accelerator-text-blue {
+    font-size:20px;
+    font-weight:400;
+    color:#7fa0d1;
+    padding-bottom: 40px;
+}
+
+.accelerator-div {
+    border:solid; 
+    border-width:2px; 
+    border-color:#ededed;
+    margin-right:30px;
+    border-radius: 5px;
+    padding-top:30px;
+}
+
+.accelerator-div-small {
+    border:solid; 
+    border-width:2px; 
+    border-color:#ededed;
+    margin-right:25px;
+    margin-left:25px;
+    margin-bottom:30px;
+    border-radius: 5px;
+    padding-top:30px;
+}
+
+.accelerator-div-bottom {
+    border:solid; 
+    border-width:2px; 
+    border-color:#ededed;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    padding-top:30px;
+}
 
 .border {
     border:1px;
