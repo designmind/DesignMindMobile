@@ -15,7 +15,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +28,31 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- FlexSlider -->
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    var $ = jQuery.noConflict();
+    $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "fade"
+    });
 
+	$(function() {
+		$('.show_menu').click(function(){
+				$('.menu').fadeIn();
+				$('.show_menu').fadeOut();
+				$('.hide_menu').fadeIn();
+		});
+		$('.hide_menu').click(function(){
+				$('.menu').fadeOut();
+				$('.show_menu').fadeIn();
+				$('.hide_menu').fadeOut();
+		});
+	});
+  });
+    </script>
 </head>
 
 <body>
@@ -66,54 +91,333 @@
         </video>
     </div>-->
     <!-- Header -->
-    <header id="top" class="header2">
+    <div class="slider_container">
+        <div class="flexslider">
+            <ul class="slides text-vertical-center">
+                <li>
+                    <a href="#"><img src="img/Final_Image_1_2X.png" alt="" title="" /></a>
+                    <div class="flex-caption">
+                        <div class="caption_title_line">
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:steelblue; font-weight:lighter;">Complete Mobile Development.</div>
+                            <div class="headertext-center">
+                                Conceptualize, design, engineer, build and deliver your iOS, Android,<br />
+                                Responsive/ Hybrid and Xamarin Applications with our complete mobile <br /> solutions agency.
+                                With a library of functions and industry experts in <br />Middleware and data we are the complete solution provider.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/YourEnterprisePartner_RETINA.png" alt="" title="" /></a>
+                    <div class="flex-caption">
+                        <div class="caption_title_line">
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:black; font-weight:lighter;">Your Enterprise Partner</div>
+                            <div class="headertext-center">
+                                Our data science, big data and infrastructure specialist and industry leaders have advanced skills in<br />
+                                integration services, back-end architecture and data security to make your mobile applications connect<br />
+                                to your existing systems and the business intelligence to interact with your data.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/Streamlined_Development_RETINA.png" alt="" title="" /></a>
+                    <div class="flex-caption">
+                        <div class="caption_title_line">
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter;">Streamlined Development</div>
+                            <div class="headertext-center" style="color:white;">
+                                Our vast library of functions reduces the time of mobile delivery and development while<br /> increasing
+                                longevity of your product functions by using a suite of services for <br />
+                                integration layer, mobile security, data transport, offline logic and application analytics.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<div id="top" class="header hidden-xs">
         <div class="text-vertical-center">
-            <div class="headertext-h1-white">Complete Mobile Development.</div>
-            <div class="headertext-center-white">
-                Conceptualize, design, engineer, build and deliver your iOS, Android,<br />
-                Responsive/ Hybrid and Xamarin Applications with our complete mobile <br /> solutions agency.
-                With a library of functions and industry experts in <br />Middleware and data we are the complete solution provider.
+            <div class="headertext-h1" style="color:steelblue;">Complete Mobile Development.</div>
+            <div class="headertext-center">Conceptualize, design, engineer, build and deliver your iOS, Android,<br/>
+                Responsive/ Hybrid and Xamarin Applications with our complete mobile <br/> solutions agency.
+             With a library of functions and industry experts in <br />Middleware and data we are the complete solution provider.</div>
+            <br>
+            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+        </div>
+    </div>-->
+
+    <div id="top" class="headersmall hidden-xl hidden-lg hidden-md hidden-sm">
+        <div class="text-vertical-center">
+            <div class="headertext-h1-small" style="color:steelblue;">Complete Mobile Development.</div>
+            <div class="headertext-center-small">
+                Conceptualize, design, engineer, build <br />and deliver your iOS, Android,<br />
+                Responsive/ Hybrid and Xamarin <br />Applications with our complete mobile <br /> solutions agency.
+                With a library of functions<br /> and industry experts in <br />Middleware and data we are the complete solution provider.
             </div>
             <br>
-            <a href="#about" class="btn btn-lg text header-btn">Get Started</a>
+            <button type="button" id="myBtn" class="btn btn-lg text header-btn-small">Get Started</button>
         </div>
-    </header>
-
-    <!-- Footer -->
-    <div>
-        <div class="row">
-            <div class="col-lg-6">
-                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12611.970318332944!2d-122.40707235364697!3d37.79021366882881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe415fef1c46ecef9!2sDesignMind!5e0!3m2!1sen!2sus!4v1453938171867" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="container hidden-sm hidden-xs" style="width:800px;">
+        <div class="row" style="text-align:center;">
+            <div class="acceleratortext-h1">Mobile Solution Accelerators</div>
+            <div class="accelerator-center">
+                Get to the completion line faster with client and server side libraries of functions that come with<br />
+                streamlined application development and delivery. Our modules contain common requirements <br />
+                accross multiple platforms including iOS and Android. Test across many devices in the <br />
+                cloud and automate delivery of mission critical updates with 100% confidence of success.
             </div>
-            <div class="col-lg-6" style="border-top:2px; border-top-color:black;">
-                <div class="text" style="font-size:37px; font-weight:lighter;">Talk to us: <a href="mailto:mobile@designmind.com" style="color:#F18B22">mobile@designmind.com</a></div>
-                <div class="text">607 Market Street San Francisco, CA 94105 </div>
-                <a href="tel:+14155388484" class="text" style="color:black;">(415)538-8484</a>
-                <a href="http://www.designmind.com">   designmind.com</a>
-
-                <br>
-                <ul class="list-inline" style="padding-top:40px;">
-                    <li>
-                        <a href="https://www.facebook.com/DesignMindSoftware"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/designminddata"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/designmind"><i class="fa fa-linkedin fa-fw fa-3x"> </i></a>
-                    </li>
-                </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright &copy; DesignMind 2016</p>
+        </div>
+        <div class="row" style="margin-top:40px; text-align:center; width:630px;margin-left:60px;">
+            <div class="accelerator-div" style="float:left;">
+                <img src="img/Location_Icon.svg" style="width:114px; height:114px;" alt="location icon" />
+                <div class="text accelerator-h3">Location</div>
+                <div class="text accelerator-text-orange">
+                    GPS &middot; Beacon &middot; <br />
+                    Bluetooth &middot; Wifi
+                </div>
+            </div>
+            <div class="accelerator-div" style="float:right;">
+                <img src="img/Security_Icon.svg" style="width:114px; height:114px;" alt="security icon" />
+                <div class="text accelerator-h3">Security</div>
+                <div class="text accelerator-text-blue">
+                    Certificate &middot; Encryption <br />
+                    Authentication &middot; Touch ID
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center;  width:630px;margin-left:60px;">
+            <div class="accelerator-div" style="float:left;">
+                <img src="img/MobileData_Icon.svg" style="width:114px; height:114px;" alt="mobile icon" />
+                <div class="text accelerator-h3">Mobile Data</div>
+                <div class="text accelerator-text-blue">
+                    Offline Storage &middot; Caching  <br />
+                    Transactions &middot; Background Data
+                </div>
+            </div>
+            <div class="accelerator-div" style="float:right;">
+                <img src="img/Communications_Icon.svg" style="width:114px; height:114px;" alt="communications icon" />
+                <div class="text accelerator-h3">Communication</div>
+                <div class="text accelerator-text-orange">
+                    Push Notifications &middot; Email  <br />
+                    In-App &middot; Text Messaging
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="accelerator-div-bottom" style="width:630px; margin-left:75px; height:180px;">
+                <div>
+                    <img src="img/Delivery_Icon.svg" style="width:114px; height:114px; float: left; margin-left:40px;"
+                         alt="delivery icon" />
+                </div>
+                <div style="float: right; margin-right: 10px;">
+                    <div class="text accelerator-h3">Delivery</div>
+                    <div class="text accelerator-text-blue">
+                        Enterprise Mobility Manager &middot; Cloud Testing  <br />
+                        Application Analytics
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <div class="hidden-md hidden-lg hidden-xl">
+        <div class="row" style="text-align:center;">
+            <div class="acceleratortext-h1-small">Mobile Solution Accelerators</div>
+            <div class="accelerator-center-small hidden-sm hidden-md">
+                Get to the completion line faster with client <br />and server side libraries of functions that come<br /> with
+                streamlined application development and <br />delivery. Our modules contain common<br /> requirements
+                accross multiple platforms including<br /> iOS and Android. Test across many devices in the
+                <br />cloud and automate delivery of mission critical <br />updates with 100% confidence of success.
+            </div>
+            <div class="accelerator-center-small hidden-xs">
+                Get to the completion line faster with client and server side libraries of functions that come with<br />
+                streamlined application development and delivery. Our modules contain common requirements <br />
+                accross multiple platforms including iOS and Android. Test across many devices in the <br />
+                cloud and automate delivery of mission critical updates with 100% confidence of success.
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px; text-align:center;">
+            <div class="col-lg-1 accelerator-div-small">
+                <img src="img/Location_Icon.svg" style="width:114px; height:114px;" alt="location icon" />
+                <div class="text accelerator-h3">Location</div>
+                <div class="text accelerator-text-orange">
+                    GPS &middot; Beacon &middot; <br />
+                    Bluetooth &middot; Wifi
+                </div>
+            </div>
+            <div class="col-lg-1 accelerator-div-small">
+                <img src="img/Security_Icon.svg" style="width:114px; height:114px;" alt="security icon" />
+                <div class="text accelerator-h3">Security</div>
+                <div class="text accelerator-text-blue">
+                    Certificate &middot; Encryption <br />
+                    Authentication &middot; Touch ID
+                </div>
+            </div>
+        </div>
+        <div class="row" style="text-align:center;">
+            <div class="col-lg-1 accelerator-div-small">
+                <img src="img/MobileData_Icon.svg" style="width:114px; height:114px;" alt="mobile icon" />
+                <div class="text accelerator-h3">Mobile Data</div>
+                <div class="text accelerator-text-blue">
+                    Offline Storage &middot; Caching  <br />
+                    Transactions &middot; Background Data
+                </div>
+            </div>
+            <div class="col-lg-1 accelerator-div-small">
+                <img src="img/Communications_Icon.svg" style="width:114px; height:114px;" alt="communications icon" />
+                <div class="text accelerator-h3">Communication</div>
+                <div class="text accelerator-text-orange">
+                    Push Notifications &middot; Email  <br />
+                    In-App &middot; Text Messaging
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:30px; text-align:center;">
+            <div class="col-lg-1 accelerator-div-small">
+                <img src="img/Delivery_Icon.svg" style="width:114px; height:114px;"
+                     alt="delivery icon" />
+                <div class="text accelerator-h3">Delivery</div>
+                <div class="text accelerator-text-blue">
+                    Enterprise Mobility Manager &middot; <br />Cloud Testing  <br />
+                    Application Analytics
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div>
+        <hr-custom />
+        <div class="row hidden-xs hidden-sm hidden-md">
+            <div class="col-lg-6" style="height:300px;">
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12611.970318332944!2d-122.40707235364697!3d37.79021366882881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe415fef1c46ecef9!2sDesignMind!5e0!3m2!1sen!2sus!4v1453938171867" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6">
+                <div class="text" style="font-size:37px; font-weight:lighter; padding-top:50px;">Talk to us: <a href="mailto:mobile@designmind.com" style="color:#F18B22;">mobile@designmind.com</a></div>
+                <div class="text">607 Market Street San Francisco, CA 94105 </div>
+                <a href="tel:+14155388484" class="text" style="color:black;">415.538.8484</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://www.designmind.com">designmind.com</a>
+
+                <br>
+                <ul class="list-inline" style="padding-top:40px;">
+                    <li>
+                        <a href="https://www.facebook.com/DesignMindSoftware"><img src="img/Facebook_Icon.png" alt="Facebook Link" /></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/designminddata"><img src="img/Twitter_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/designmind"><img src="img/LinkedIn_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                    </li>
+                </ul>
+                <!--<p class="text-muted">Copyright &copy; DesignMind 2016</p>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row hidden-lg hidden-xl">
+        <div class="col-lg-6" style="height:300px;">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12611.970318332944!2d-122.40707235364697!3d37.79021366882881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe415fef1c46ecef9!2sDesignMind!5e0!3m2!1sen!2sus!4v1453938171867" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-lg-6">
+            <div class="text" style="font-size:25px; font-weight:lighter; padding-top:50px; padding-left:25px;">Talk to us: <a href="mailto:mobile@designmind.com" style="color:#F18B22">mobile@designmind.com</a></div>
+            <div class="text" style=" padding-left:25px;">607 Market Street San Francisco, CA 94105 </div>
+            <a href="tel:+14155388484" class="text" style="color:black; padding-left:25px;">415.538.8484</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.designmind.com">designmind.com</a>
+
+            <br>
+            <ul class="list-inline" style="padding-top:40px; padding-left:25px;">
+                <li>
+                    <a href="https://www.facebook.com/DesignMindSoftware"><img src="img/Facebook_Icon.png" alt="Facebook Link" /></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/designminddata"><img src="img/Twitter_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/designmind"><img src="img/LinkedIn_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                </li>
+            </ul>
+            <!--<p class="text-muted">Copyright &copy; DesignMind 2016</p>-->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="text"> Develop your mobile applications with DesignMind</h3>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Comments"></textarea>
+                        </div><button type="submit" id="emailSubmit" class="btn btn-default btn-warning btn-block">Send</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+
+
+            $("#emailSubmit").click(function () {
+                var name = $("#name").val()
+                var email = $("#email").val()
+                var message = $("#message").val()
+                var response = $.ajax({
+                    url: "https://api.mailgun.net/v3/sandbox74d630e120154879905503cf3b4b67fc.mailgun.org/messages",
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Basic " + btoa("api:key-59ddd5a6c2e9433eea197a00cb78c94c"),
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    data: {
+                        from: 'kimate@hotmail.com',
+                        to: 'mobile@designmind.com',
+                        subject: 'Web Inquiry',
+                        body: name + " " + email + " " + message
+                    },
+                    // cache: false,
+                    success: function () {
+                        alert('message sent');
+                    },
+                    error: function () {
+                    }
+                })
+
+            });
+
+        });
+    </script>
 
 </body>
 

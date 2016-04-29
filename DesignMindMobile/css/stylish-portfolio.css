@@ -186,6 +186,30 @@ hr.small {
     -o-background-size: cover;
 }
 
+.headersmall1 {
+    display: table;
+    position: relative;
+    width: 100%;
+
+    background: url(../img/YourEnterprisePartner_RETINA.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headersmall2 {
+    display: table;
+    position: relative;
+    width: 100%;
+
+    background: url(../img/Streamlined_Development_RETINA.png) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .header2 {
     display: table;
     position: relative;
@@ -352,6 +376,18 @@ hr.small {
     padding-right:100px;
     margin-bottom:40px;
 }
+
+.header-btn-sm {
+    color:#FFFFFF; 
+    background-color:#F18B22; 
+    font-size:29px; 
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:100px; 
+    padding-right:100px;
+    margin-bottom:40px;
+}
+
 .text {
     font-family:'Source Sans Pro';
 }
