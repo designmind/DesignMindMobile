@@ -1,6 +1,6 @@
 
 /*-----------------------------------------------------------------------------------*/
-.slider_container{ width:100%; margin:auto; clear:both; background:url(../img/images/shadow_top.png) no-repeat top center; padding:30px 0 0 0;}
+.slider_container{ width:100%; margin:auto; clear:both; background:url(../img/images/shadow_top.png) no-repeat top center; padding:0 0 0 0;}
 .flex-caption{ position: absolute; left:20%; top:100px;}
 .caption_title_line{ width:900px; height:75px; padding:5px 15px 10px 15px; repeat;color: #303030;}
 .caption_title_line_medium{ width:700px; height:75px; padding:5px 15px 10px 15px; repeat;color: #303030;}
@@ -25,6 +25,7 @@ html[xmlns] .slides {display: block;}
 .flexslider {position: relative; zoom: 1;}
 .flexslider .slides {zoom: 1;}
 .flexslider .slides > li {position: relative;}
+.flexslider .end {margin-left:-15px;}
 .flex-container {zoom: 1; position: relative;}
 
 /* Direction Nav */
@@ -37,7 +38,7 @@ html[xmlns] .slides {display: block;}
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -30px; text-align: center;}
-.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li {margin: 0 0 0 0px; display: inline-block; zoom: 1; *display: inline;}
 .flex-control-nav li:first-child {margin: 0;}
 .flex-control-nav li a {width: 13px; height: 13px; display: block; cursor: pointer; text-indent: -9999px;}
 .flex-control-nav li a:hover {background-position: 0 -13px;}
@@ -47,7 +48,7 @@ html[xmlns] .slides {display: block;}
 /*-----------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 1000px) {
-.slider_container{ width:90%; margin:0 0 0 2%; clear:both; background:none; padding:30px 0 0 0;}
+.slider_container{ width:100%; margin:0 0 0 0; clear:both; background:none; padding:30px 0 0 0;}
 .flexslider {width: 100%; margin: 0; padding:0 0 30px 0;background:none;}
 .flex-direction-nav li a {width:45px; height:42px; margin:0; display: block; position: absolute; right:-10px; cursor: pointer; text-indent: -9999px;}
 .flex-direction-nav li a.next {background:url(../img/images/next.png) no-repeat center; bottom:85px;}

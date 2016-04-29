@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\styles.css" />
+    <Content Include="css\unslider-dots.css" />
+    <Content Include="css\unslider.css" />
     <Content Include="img\Communications_Icon.svg" />
     <Content Include="img\Delivery_Icon.svg" />
     <Content Include="img\DMMobileLogo.png" />
@@ -126,6 +128,7 @@
     <Content Include="information\Contact\ContactForm.html" />
     <Content Include="information\DigitalStrategy.html" />
     <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\unslider-min.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -200,6 +203,11 @@
     <Resource Include="fonts\SourceSansPro-SemiboldIt.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Content Include="css\dots.less" />
+    <Content Include="css\reset.less" />
+    <Content Include="css\unslider-dots.less" />
+    <Content Include="css\unslider.less" />
+    <Content Include="css\variables.less" />
     <None Include="Properties\PublishProfiles\designmind %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />

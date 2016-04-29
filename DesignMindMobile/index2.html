@@ -91,12 +91,12 @@
         </video>
     </div>-->
     <!-- Header -->
-    <div class="slider_container">
-        <div class="flexslider">
+    <div class="slider_container hidden-xs hidden-sm">
+        <div class="flexslider" style="text-align:center;">
             <ul class="slides text-vertical-center">
                 <li>
-                    <a href="#"><img src="img/Final_Image_1_2X.png" alt="" title="" /></a>
-                    <div class="flex-caption">
+                    <img src="img/Final_Image_1_2X.png" max-width="100%" alt="" title="" />
+                    <div class="flex-caption hidden-md hidden-sm hidden-xs">
                         <div class="caption_title_line">
                             <div style="font-size:68px; font-family:'Source Sans Pro'; color:steelblue; font-weight:lighter;">Complete Mobile Development.</div>
                             <div class="headertext-center">
@@ -108,10 +108,24 @@
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
                         </div>
                     </div>
+                    <div class="flex-caption hidden-lg hidden-xl hidden-xs hidden-sm">
+                        <div class="caption_title_line_medium">
+                            <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
+                                font-size:28px; font-weight:lighter;">Complete Mobile Development.</div>
+                            <div class="headertext-center-small">
+                                Conceptualize, design, engineer, build and deliver your iOS, Android,<br />
+                                Responsive/ Hybrid and Xamarin Applications with our complete mobile <br />
+                                solutions agency. With a library of functions and industry experts in <br />
+                                Middleware and data we are the complete solution provider.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn text header-btn-sm">Get Started</button>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#"><img src="img/YourEnterprisePartner_RETINA.png" alt="" title="" /></a>
-                    <div class="flex-caption">
+                    <img src="img/YourEnterprisePartner_RETINA.png" max-width="100%" alt="" title="" />
+                    <div class="flex-caption hidden-md hidden-sm hidden-xs">
                         <div class="caption_title_line">
                             <div style="font-size:68px; font-family:'Source Sans Pro'; color:black; font-weight:lighter;">Your Enterprise Partner</div>
                             <div class="headertext-center">
@@ -123,26 +137,55 @@
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
                         </div>
                     </div>
+                    <div class="flex-caption hidden-lg hidden-xl hidden-xs hidden-sm">
+                        <div class="caption_title_line_medium">
+                            <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
+                                font-size:28px; color:black; font-weight:lighter;">Your Enterprise Partner</div>
+                            <div class="headertext-center-small">
+                                Our data science, big data and infrastructure specialist and industry <br />
+                                leaders have advanced skills in integration services, back-end architecture<br />
+                                and data security to make your mobile applications connect to your existing<br />
+                                systems and the business intelligence to interact with your data.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn btn-sm text header-btn-sm">Get Started</button>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#"><img src="img/Streamlined_Development_RETINA.png" alt="" title="" /></a>
-                    <div class="flex-caption">
+                    <img src="img/Streamlined_Development_RETINA.png" max-width="100%" alt="" title="" />
+                    <div class="flex-caption  hidden-md hidden-sm hidden-xs">
                         <div class="caption_title_line">
                             <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter;">Streamlined Development</div>
                             <div class="headertext-center" style="color:white;">
-                                Our vast library of functions reduces the time of mobile delivery and development while<br /> increasing
-                                longevity of your product functions by using a suite of services for <br />
-                                integration layer, mobile security, data transport, offline logic and application analytics.
+                                Our vast library of functions reduces the time of mobile delivery and<br />
+                                development while increasing longevity of your product functions by using<br />
+                                a suite of services for integration layer, mobile security, data transport,<br />
+                                offline logic and application analytics.
                             </div>
                             <br>
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="flex-caption hidden-lg hidden-xl hidden-xs hidden-sm">
+                        <div class="caption_title_line_medium">
+                            <div style="font-size:38px; font-family:'Source Sans Pro'; color:white;
+                                font-size:28px; font-weight:lighter;">Streamlined Development</div>
+                            <div class="headertext-center-small" style="color:white;">
+                                Our vast library of functions reduces the time of mobile delivery and<br />
+                                development while increasing longevity of your product functions by using<br />
+                                a suite of services for integration layer, mobile security, data transport,<br />
+                                offline logic and application analytics.
+                            </div>
+                            <br>
+                            <button type="button" id="myBtn" class="btn btn-sm text header-btn-sm">Get Started</button>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <!--<div id="top" class="header hidden-xs">
+    <!--<!--<div id="top" class="header hidden-xs">
         <div class="text-vertical-center">
             <div class="headertext-h1" style="color:steelblue;">Complete Mobile Development.</div>
             <div class="headertext-center">Conceptualize, design, engineer, build and deliver your iOS, Android,<br/>
@@ -153,16 +196,67 @@
         </div>
     </div>-->
 
-    <div id="top" class="headersmall hidden-xl hidden-lg hidden-md hidden-sm">
-        <div class="text-vertical-center">
-            <div class="headertext-h1-small" style="color:steelblue;">Complete Mobile Development.</div>
-            <div class="headertext-center-small">
-                Conceptualize, design, engineer, build <br />and deliver your iOS, Android,<br />
-                Responsive/ Hybrid and Xamarin <br />Applications with our complete mobile <br /> solutions agency.
-                With a library of functions<br /> and industry experts in <br />Middleware and data we are the complete solution provider.
+    <div id="top" class="hidden-xl hidden-lg hidden-md">
+        <div class="row headersmall">
+            <div class="text-vertical-center col-md-4">
+                <div class="headertext-h1-small" style="color:steelblue;">Complete Mobile Development.</div>
+                <div class="headertext-center-small hidden-sm">
+                    Conceptualize, design, engineer, build <br />and deliver your iOS, Android,<br />
+                    Responsive/ Hybrid and Xamarin <br />Applications with our complete mobile <br /> solutions agency.
+                    With a library of functions<br /> and industry experts in Middleware and <br />data we are the complete solution provider.
+                </div>
+                <div class="headertext-center-small hidden-xs">
+                    Conceptualize, design, engineer, build and deliver your iOS,<br />
+                    Android, Responsive/ Hybrid and Xamarin >Applications with our<br />
+                    complete mobile solutions agency. With a library of functions<br />
+                    and industry experts in Middleware and data we are the complete<br /> solution provider.
+                </div>
+                <br>
+                <a class="btn text header-btn-small" style="background-color:green" href="#partner">Get Started</a>
             </div>
-            <br>
-            <button type="button" id="myBtn" class="btn btn-lg text header-btn-small">Get Started</button>
+        </div>
+        <div class="row headersmall1" id="partner">
+            <div class="text-vertical-center col-md-4">
+                <div class="headertext-h1-small" style="color:black;">Your Enterprise Partner</div>
+                <div class="headertext-center-small hidden-sm">
+                    Our data science, big data and infrastructure<br />
+                    specialist and industry leaders have advanced skills<br />
+                    in integration services, back-end architecture and<br />
+                    data security to make your mobile applications <br />
+                    connect to your existing systems and the business <br />
+                    intelligence to interact with your data.
+                </div>
+                <div class="headertext-center-small hidden-xs">
+                    Our data science, big data and infrastructure specialist and<br />
+                    industry leaders have advanced skills in integration services,<br />
+                    back-end architecture and data security to make your mobile<br />
+                    applications connect to your existing systems and the business <br />
+                    intelligence to interact with your data.
+                </div>
+                <br>
+                <a class="btn text header-btn-small" href="#stream">Development Process</a>
+            </div>
+        </div>
+        <div class="row headersmall2" id="stream">
+            <div class="text-vertical-center col-md-4">
+                <div class="headertext-h1-small" style="color:white;">Streamlined Development</div>
+                <div class="headertext-center-small hidden-sm" style="color:white;">
+                    Our vast library of functions reduces the time<br />
+                    of mobile delivery and development while increasing<br />
+                    longevity of your product functions by using<br />
+                    a suite of services for integration layer, mobile<br />
+                    security, data transport, offline logic and <br />
+                    application analytics.
+                </div>
+                <div class="headertext-center-small hidden-xs" style="color:white;">
+                    Our vast library of functions reduces the time of mobile delivery and<br />
+                    development while increasing longevity of your product functions by using<br />
+                    a suite of services for integration layer, mobile security, data transport,<br />
+                    offline logic and application analytics.
+                </div>
+                <br>
+                <a class="btn btn-lg text header-btn-small" style="background-color:skyblue" href="#contact">Contact Us</a>
+            </div>
         </div>
     </div>
     <div class="container hidden-sm hidden-xs" style="width:800px;">
@@ -170,8 +264,8 @@
             <div class="acceleratortext-h1">Mobile Solution Accelerators</div>
             <div class="accelerator-center">
                 Get to the completion line faster with client and server side libraries of functions that come with<br />
-                streamlined application development and delivery. Our modules contain common requirements <br />
-                accross multiple platforms including iOS and Android. Test across many devices in the <br />
+                streamlined application development and delivery. Our modules contain common requirements<br />
+                accross multiple platforms including iOS and Android. Test across many devices in the<br />
                 cloud and automate delivery of mission critical updates with 100% confidence of success.
             </div>
         </div>
@@ -324,7 +418,7 @@
         </div>
     </div>
 
-    <div class="row hidden-lg hidden-xl">
+    <div class="row hidden-lg hidden-xl" id="contact">
         <div class="col-lg-6" style="height:300px;">
             <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12611.970318332944!2d-122.40707235364697!3d37.79021366882881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe415fef1c46ecef9!2sDesignMind!5e0!3m2!1sen!2sus!4v1453938171867" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
@@ -414,6 +508,19 @@
                     }
                 })
 
+            });
+
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
             });
 
         });
