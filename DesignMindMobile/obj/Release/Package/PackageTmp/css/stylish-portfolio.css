@@ -490,12 +490,7 @@ hr-custom-blue {
 }
 
 hr-custom-orange { 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 2px;
-    border-color:#f9ad63
+  border: 5px;
 }
 
 /* About */
