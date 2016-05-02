@@ -448,7 +448,12 @@ hr.small {
 }
 
 .team-h3 {
-    font-size:38px;
+    font-size:60px;
+    color:#373737;
+    font-weight:lighter;
+}
+.team-h3-small {
+    font-size:40px;
     color:#373737;
     font-weight:lighter;
 }
@@ -475,13 +480,22 @@ hr-custom {
     border-color:#2558A9
 }
 
+hr-custom-blue { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+    border-color:#7fa0d1
+}
+
 hr-custom-orange { 
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-style: inset;
-    border-width: 1px;
-    border-color:#faae64
+    border-width: 2px;
+    border-color:#f9ad63
 }
 
 /* About */
