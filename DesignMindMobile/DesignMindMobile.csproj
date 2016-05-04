@@ -97,8 +97,10 @@
     <Content Include="css\styles.css" />
     <Content Include="css\unslider-dots.css" />
     <Content Include="css\unslider.css" />
+    <Content Include="img\20160416_183419fin.jpg" />
     <Content Include="img\322052_10150410053195309_2078205892_o.png" />
     <Content Include="img\322052_10150410053195309_2078205892_o1.png" />
+    <Content Include="img\ActiveSlider_Button.png" />
     <Content Include="img\Angel.png" />
     <Content Include="img\Communications_Icon.svg" />
     <Content Include="img\David.png" />
@@ -121,6 +123,7 @@
     <Content Include="img\images\shadow_bottom.png" />
     <Content Include="img\images\shadow_top.png" />
     <Content Include="img\images\slider_caption_bg.png" />
+    <Content Include="img\InactiveSlider_Button.png" />
     <Content Include="img\Jacob.png" />
     <Content Include="img\Kimate.png" />
     <Content Include="img\LinkedIn_Icon.png" />

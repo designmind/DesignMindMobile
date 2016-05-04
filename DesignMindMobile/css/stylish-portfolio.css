@@ -388,6 +388,16 @@ hr.small {
     margin-bottom:40px;
 }
 
+.header-btn-sm1 {
+    color:#FFFFFF; 
+    background-color:#F18B22; 
+    font-size:29px; 
+    padding-top:10px;
+    padding-bottom:10px;
+
+    margin-bottom:40px;
+}
+
 .text {
     font-family:'Source Sans Pro';
 }

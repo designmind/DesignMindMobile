@@ -37,11 +37,13 @@
 		jQuery(document).ready(function($) {
 		    $('.my-slider').unslider({
 		        autoplay: true,
-		        speed: 50,
+		        speed: 750,
 		        dots: true,
 		        nav: true,
-		        delay: 3000,
-                arrows: false
+		        delay: 7000,
+		        arrows: false,
+		        fluid: true,
+                fade: true
 		    });
 		});
     </script>
@@ -103,18 +105,17 @@
                 <li style="background-image:url('img/Final_Image_1_2X.png')">
 
                         <!--<img src="img/Final_Image_1_2X.png" max-width="100%" alt="" title="" />-->
-                        <div class="hidden-md hidden-sm hidden-xs">
-                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:steelblue; font-weight:lighter;">Complete Mobile Development.</div>
+                        <div>
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:steelblue; font-weight:lighter; padding-top:100px;">Complete Mobile Development.</div>
                             <div class="headertext-center">
-                                Conceptualize, design, engineer, build and deliver your iOS, Android,<br />
-                                Responsive/ Hybrid and Xamarin Applications with our complete mobile <br /> solutions agency.
-                                With a library of functions and industry experts in <br />Middleware and data we are the complete solution provider.
+                                Our team can make your enterprise app a reality. We design, build, and deliver highly effective, data intensive apps. <br/>
+                                Our combined mobile and database skills are unique among bay area agencies.   
                             </div>
                             <br>
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
 
 
-                        <div class="hidden-lg hidden-xl hidden-xs hidden-sm">
+                        <div class="hidden-lg hidden-xl">
 
                             <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
                                 font-size:28px; font-weight:lighter;">Complete Mobile Development.</div>
@@ -134,16 +135,15 @@
                     <!--<img src="img/YourEnterprisePartner_RETINA.png" max-width="100%" alt="" title="" />-->
                     <div class="hidden-md hidden-sm hidden-xs">
 
-                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:black; font-weight:lighter;">Your Enterprise Partner</div>
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:black; font-weight:lighter; padding-top:100px;">Your Enterprise Partner</div>
                             <div class="headertext-center">
-                                Our data science, big data and infrastructure specialist and industry leaders have advanced skills in<br />
-                                integration services, back-end architecture and data security to make your mobile applications connect<br />
-                                to your existing systems and the business intelligence to interact with your data.
+                                Connect to your data from any mobile device. Custom mobile development backed by data experts. <br/>
+                                Security, scalability, availability and analytics and a great user experience.
                             </div>
                             <br>
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
                     </div>
-                    <div class="hidden-lg hidden-xl hidden-xs hidden-sm">
+                    <div class="hidden-lg hidden-xl">
                             <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
                                 font-size:28px; color:black; font-weight:lighter;">Your Enterprise Partner</div>
                             <div class="headertext-center-small">
@@ -158,20 +158,20 @@
                 </li>
                 <li style="background-image:url('img/Streamlined_Development_RETINA.png')">
                     <!--<img src="img/Streamlined_Development_RETINA.png" max-width="100%" alt="" title="" />-->
-                    <div class="hidden-md hidden-sm hidden-xs">
+                    <div class="hidden-md">
 
-                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter;">Streamlined Development</div>
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter; padding-top:100px;">Streamlined Development</div>
                             <div class="headertext-center" style="color:white;">
-                                Our vast library of functions reduces the time of mobile delivery and<br />
-                                development while increasing longevity of your product functions by using<br />
-                                a suite of services for integration layer, mobile security, data transport,<br />
+                                Our vast library of functions reduces the time of mobile delivery and
+                                development while increasing longevity of your <br/>product functions by using
+                                a suite of services for integration layer, mobile security, data transport,
                                 offline logic and application analytics.
                             </div>
                             <br>
                             <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
       
                     </div>
-                    <div class="hidden-lg hidden-xl hidden-xs hidden-sm">
+                    <div class="hidden-lg hidden-xl">
 
                             <div style="font-size:38px; font-family:'Source Sans Pro'; color:white;
                                 font-size:28px; font-weight:lighter;">Streamlined Development</div>
@@ -219,7 +219,7 @@
                     and industry experts in Middleware and data we are the complete<br /> solution provider.
                 </div>
                 <br>
-                <a class="btn text header-btn-small" style="background-color:green; width:100%;" href="#partner">Get Started</a>
+                <a class="btn text header-btn-sm1" style="background-color:green; width:100%;" href="#partner">Get Started</a>
             </div>
         </div>
         <div class="row headersmall1" id="partner">
@@ -243,7 +243,7 @@
                     intelligence to interact with your data.
                 </div>
                 <br>
-                <a class="btn btn-lg text header-btn-small"style="width:100%" href="#stream">Process</a>
+                <a class="btn btn-lg text header-btn-sm1"style="width:100%" href="#stream">Process</a>
             </div>
         </div>
         <div class="row headersmall2" id="stream">
@@ -265,7 +265,7 @@
                     offline logic and application analytics.
                 </div>
                 <br>
-                <a  class="btn btn-lg text header-btn-small" style="background-color:skyblue; width:100%;" href="#contact">Contact Us</a>
+                <a  class="btn btn-lg text header-btn-sm1" style="background-color:skyblue; width:100%;" href="#contact">Contact Us</a>
             </div>
         </div>
     </div>
@@ -398,24 +398,40 @@
     </div>
 
     <!-- Case Study-->
-    <div class="row visible-lg" style="border-top:1px solid #3c2f29; border-bottom: 1px solid #3c2f29; background-color:#dddcde;">
-        <img src="img/SawyerBrewing_PreviewImage.png" alt="Sawyer Example" style="float:left; width:50%" />
-        <div style="margin-left:40px;">
-            <div class="visible-lg" style="width:40px; float:left;">&nbsp;</div>
-            <div class="visible-lg" style="padding-top:50px; float:left;">
-                <div class="text visible-lg" style="font-size:38px; color:#3c2f29;">
-                    <div class="text visible-lg" style="font-size:38px; color:#3c2f29; font-weight:lighter;">Rapid Application Development Frameworks</div>
-                </div>
-                <div class="text" style="padding-top:30px; font-size:18px;">
-                    Realize your development goals in a reduced timeline using industry standard framework libraries and the <br/>
-                    latest in cloud services. Connect with SAP, Salesforce, Dynamics CRM, social media and notifications <br/>
-                    services in a secure and efficient environment. Experience a reduced delivery cycle while utilizing our <br/>
-                    User Experience, Design and Development expertise in coordination with the skill and expertise that you already<br/>
-                    know and trust. Complete application development means building the infrastruscture, security,  Data <br/>
-                    Analytics and Business Intelligence, design and build with DesignMind today.   
-                </div>
-                <div style="padding-top:20px; padding-bottom:15px;">
-                    <a class="btn btn-lg text header-btn-small" href="#contact">See How We Built It</a>
+    <div class="row" style="border-top:1px solid #3c2f29; border-bottom: 1px solid #3c2f29; background-color:#dddcde;">
+        <div class="col-lg-6">
+            <img src="img/SawyerBrewing_PreviewImage.png" alt="Sawyer Example" width="100%" />
+        </div>
+        <div class="col-lg-6">
+            <div style="margin-left:40px;">
+                <div style="width:40px; float:left;">&nbsp;</div>
+                <div style="padding-top:50px; float:left;">
+                    <div style="font-size:38px; color:#3c2f29;">
+                        Rapid Application Development Frameworks
+                    </div>
+                    <div class="text hidden-xs" style="padding-top:30px; font-size:18px;">
+                        Realize your development goals in a reduced timeline using industry standard framework libraries and the <br />
+                        latest in cloud services. Connect with SAP, Salesforce, Dynamics CRM, social media and notifications <br />
+                        services in a secure and efficient environment. Experience a reduced delivery cycle while utilizing our <br />
+                        User Experience, Design and Development expertise in coordination with the skill and expertise that you already<br />
+                        know and trust. Complete application development means building the infrastruscture, security,  Data <br />
+                        Analytics and Business Intelligence, design and build with DesignMind today.
+                    </div>
+                    <div class="hidden-xs" style="padding-top:20px; padding-bottom:15px;">
+                        <a class="btn btn-lg text header-btn-small" href="#contact">See How We Built It</a>
+                    </div>
+                    <div class="text visible-xs" style="padding-top:30px; font-size:18px; word-wrap:normal; word-break:break-word;">
+                        Mature Development Process
+                        &middot; User Experience & Visual Design
+                        &middot; Strategy & Rationalization
+                        &middot; Framework & Services Library
+                        &middot; Automated Build 
+                        &middot; Cloud Testing
+                        &middot; Demo & Delivery
+                    </div>
+                    <div class="visible-xs" style="padding-top:20px; padding-bottom:15px; padding-left:20px; padding-right:20px;">
+                        <a class="btn btn-group-sm text header-btn-sm1" style="font-size:28px;" href="#contact">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -436,10 +452,10 @@
     <div class="row" style="text-align:center; border-top:1px solid #7fa0d1;">
         <div class="text col-lg-offset-3">
             <div class="hidden-xs" style="float:left;">
-                <img src="img/322052_10150410053195309_2078205892_o1.png" alt="Kimate Richards photo" style="padding-top:1px; padding-right:30px; height:280px; width:280px;" />
+                <img src="img/20160416_183419fin.jpg" alt="Kimate Richards photo" style="padding-top:1px; padding-right:30px; height:280px; width:280px;" />
             </div>
             <div class="hidden-sm hidden-md hidden-lg hidden-xl" style="float:left; margin-right:100px;">
-                <img src="img/322052_10150410053195309_2078205892_o1.png" alt="Kimate Richards photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
+                <img src="img/20160416_183419fin.jpg" alt="Kimate Richards photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
             </div>
             <div class="hidden-xs">
                 <div class="team-h3" style="font-weight:lighter; padding-top:20px; text-align:left;">
