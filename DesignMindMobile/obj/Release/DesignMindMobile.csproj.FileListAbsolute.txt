@@ -34,3 +34,5 @@ c:\users\krichards\documents\visual studio 2015\Projects\DesignMindMobile\Design
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.g.resources
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.Properties.Resources.resources
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.csproj.GenerateResource.Cache
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\AWSSDK.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\AWSSDK.pdb

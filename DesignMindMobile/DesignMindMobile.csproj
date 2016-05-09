@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK, Version=2.3.55.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.2.3.55.0\lib\net45\AWSSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -94,6 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contact_form.html" />
     <Content Include="css\styles.css" />
     <Content Include="css\unslider-dots.css" />
     <Content Include="css\unslider.css" />
@@ -225,6 +230,8 @@
     <Content Include="css\unslider-dots.less" />
     <Content Include="css\unslider.less" />
     <Content Include="css\variables.less" />
+    <None Include=".bin\node.cmd" />
+    <Content Include="config.json" />
     <None Include="Properties\PublishProfiles\designmind %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />

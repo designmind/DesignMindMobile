@@ -70,58 +70,38 @@
     <nav class="navbar navbar-default">
         <div class="navbar-header">
             <div class="navbar navbar-inverse navbar-fixed-top navbar-text-new" style="border-color:#2558A9;">
-                <div class="row">
+                <div class="container-fluid">
                     <div class="col-lg-8">
-                        <div class="col-xs-offset-6"><img src="img/DMMobileLogo.png" alt="designmind mobile logo" /></div>
+                        <div class="col-lg-offset-6"><img src="img/DMMobileLogo.png" alt="designmind mobile logo" /></div>
                     </div>
-                    <div class="col-lg-4" style="text-align:left; padding-top:30px;">
-                        <a href="#" style="padding-right:60px;">Process</a>
-                        <a href="#" style="padding-right:60px;">Leadership</a>
-                        <a href="#" style="padding-right:60px;">Clients</a>
-                        <a href="#" style="padding-right:60px;">Contact</a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-lg-4 collapse navbar-collapse" style="text-align:left; padding-top:30px;">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a href="#process" style="padding-right:60px;">Process</a>
+                            </li>
+                            <li>
+                                <a href="#leadership" style="padding-right:60px;">Leadership</a>
+                            </li>
+                            <li>
+                                <a href="#" style="padding-right:60px;">Clients</a>
+                            </li>
+                            <li>
+                                <a href="#contact" style="padding-right:60px;">Contact</a>
+                            </li>
+                        </ul>    
                     </div>
                 </div>
-                <!--<ul class="navbar-right">
-                    <li>
-                        <a href="#">Process</a>
-                    </li> 
-                </ul>-->
-                <!--<div style="vertical-align:top; float:right">
-                    <a href="#">Process</a>
-                    <a href="#">Contact</a>
-                </div>-->
             </div>
         </div>
     </nav>
-        <!--<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li class="sidebar-brand">
-                    <a href="#top" onclick=$("#menu-close").click();>DesignMind</a>
-                </li>
-                <li>
-                    <a href="#top" onclick=$("#menu-close").click();>Home</a>
-                </li>
-                <li>
-                    <a href="#about" onclick=$("#menu-close").click();>About</a>
-                </li>
-                <li>
-                    <a href="#services" onclick=$("#menu-close").click();>Services</a>
-                </li>
-                <li>
-                    <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
-                </li>
-            </ul>
-        </nav>-->
-        <!--<div class="fullscreen-bg">
-            <video loop muted autoplay poster="img/sf4.jpg" class="fullscreen-bg__video">
-                <source src="https://youtu.be/AUTjsensQ0w" type="video/mp4">
-            </video>
-        </div>-->
         <!-- Header -->
         <div class="container hidden-xs hidden-sm">
             <div class="my-slider" style="text-align:center;">
@@ -133,10 +113,10 @@
                             <div style="font-size:68px; font-family:'Source Sans Pro'; color:steelblue; font-weight:lighter; padding-top:120px;">Complete Mobile Development.</div>
                             <div class="headertext-center">
                                 Our team can make your enterprise app a reality. We design, build, and deliver highly effective, data intensive apps. <br />
-                                Our combined mobile and database skills are unique among bay area agencies.
+                                Our combined mobile and database skills are unique among Bay Area agencies.
                             </div>
                             <br>
-                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                            <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
 
 
                             <div class="hidden-lg hidden-xl">
@@ -144,13 +124,12 @@
                                 <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
                                 font-size:28px; font-weight:lighter;">Complete Mobile Development.</div>
                                 <div class="headertext-center-small">
-                                    Conceptualize, design, engineer, build and deliver your iOS, Android,<br />
-                                    Responsive/ Hybrid and Xamarin Applications with our complete mobile <br />
-                                    solutions agency. With a library of functions and industry experts in <br />
-                                    Middleware and data we are the complete solution provider.
+                                    Our team can make your enterprise app a reality. We design, build, and<br/>
+                                    deliver highly effective, data intensive apps. Our combined mobile  <br/>
+                                    and database skills are unique among Bay Area agencies.
                                 </div>
                                 <br>
-                                <button type="button" id="myBtn" class="btn text header-btn-sm">Get Started</button>
+                                <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
 
                             </div>
                         </div>
@@ -165,34 +144,31 @@
                                 Security, scalability, availability and analytics and a great user experience.
                             </div>
                             <br>
-                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                            <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
                         </div>
                         <div class="hidden-lg hidden-xl">
                             <div style="font-size:38px; font-family:'Source Sans Pro'; color:steelblue;
                                 font-size:28px; color:black; font-weight:lighter;">Your Enterprise Partner</div>
                             <div class="headertext-center-small">
-                                Our data science, big data and infrastructure specialist and industry <br />
-                                leaders have advanced skills in integration services, back-end architecture<br />
-                                and data security to make your mobile applications connect to your existing<br />
-                                systems and the business intelligence to interact with your data.
+                                Connect to your data from any mobile device. Custom mobile<br />
+                                 development backed by data experts. Security, scalability, <br />
+                                availability and analytics and a great user experience.
                             </div>
                             <br>
-                            <button type="button" id="myBtn" class="btn btn-sm text header-btn-sm">Get Started</button>
+                            <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
                         </div>
                     </li>
                     <li style="background-image:url('img/Streamlined_Development_RETINA.png')">
                         <!--<img src="img/Streamlined_Development_RETINA.png" max-width="100%" alt="" title="" />-->
                         <div class="hidden-md">
 
-                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter; padding-top:120px;">Streamlined Development</div>
+                            <div style="font-size:68px; font-family:'Source Sans Pro'; color:white; font-weight:lighter; padding-top:120px;">Accelerated Mobility</div>
                             <div class="headertext-center" style="color:white;">
-                                Our vast library of functions reduces the time of mobile delivery and
-                                development while increasing longevity of your <br />product functions by using
-                                a suite of services for integration layer, mobile security, data transport,
-                                offline logic and application analytics.
+                                Our Accelerators are pre-built and tested modules that we use to quickly deliver <br/>
+                                high quality mobile solutions. 
                             </div>
                             <br>
-                            <button type="button" id="myBtn" class="btn btn-lg text header-btn">Get Started</button>
+                            <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
 
                         </div>
                         <div class="hidden-lg hidden-xl">
@@ -200,13 +176,11 @@
                             <div style="font-size:38px; font-family:'Source Sans Pro'; color:white;
                                 font-size:28px; font-weight:lighter;">Streamlined Development</div>
                             <div class="headertext-center-small" style="color:white;">
-                                Our vast library of functions reduces the time of mobile delivery and<br />
-                                development while increasing longevity of your product functions by using<br />
-                                a suite of services for integration layer, mobile security, data transport,<br />
-                                offline logic and application analytics.
+                                Our Accelerators are pre-built and tested modules that we use to <br/>
+                                quickly deliver high quality mobile solutions. 
                             </div>
                             <br>
-                            <button type="button" id="myBtn" class="btn btn-sm text header-btn-sm">Get Started</button>
+                            <a href="contact_form.html" class="btn btn-lg text header-btn">Get Started</a>
                         </div>
                     </li>
                 </ul>
@@ -228,19 +202,17 @@
                 <div class="text-vertical-center col-md-4">
                     <div class="headertext-h1-small" style="color:steelblue;">Complete Mobile Development.</div>
                     <div class="headertext-center-small hidden-sm">
-                        Conceptualize, design, engineer, build <br />
-                        and deliver your iOS, Android,<br />
-                        and Xamarin Applications with our <br />
-                        complete mobile solutions agency. <br />
-                        With a library of functions and industry<br />
-                        experts in Middleware and data we are<br />
-                        the complete solution provider for the Bay Area.
+                        Our team can make your enterprise <br />
+                        app a reality. We design, build, and<br />
+                        deliver highly effective, data <br />
+                        intensive apps.  Our combined mobile<br /> 
+                        and database skills are unique among <br />
+                        Bay Area agencies.
                     </div>
                     <div class="headertext-center-small hidden-xs">
-                        Conceptualize, design, engineer, build and deliver your iOS,<br />
-                        Android, Responsive/ Hybrid and Xamarin >Applications with our<br />
-                        complete mobile solutions agency. With a library of functions<br />
-                        and industry experts in Middleware and data we are the complete<br /> solution provider.
+                        Our team can make your enterprise app a reality. We design, <br/>
+                        build, and deliver highly effective, data intensive apps. <br />
+                        Our combined mobile and database skills are unique among Bay Area agencies.
                     </div>
                     <br>
                     <a class="btn text header-btn-sm1" style="background-color:green; width:100%;" href="#partner">Get Started</a>
@@ -250,21 +222,16 @@
                 <div class="text-vertical-center col-md-4">
                     <div class="headertext-h1-small" style="color:black;">Your Enterprise Partner</div>
                     <div class="headertext-center-small hidden-sm">
-                        Our data science, big data and <br />
-                        infrastructure specialist and industry<br />
-                        leaders have advanced skills in <br />
-                        integration services, back-end <br />
-                        architecture and  to make your<br />
-                        mobile applications connect to your<br />
-                        existing systems and the business<br />  intelligence
-                        to interact with your data.
+                        Connect to your data from any mobile <br />
+                        device. Custom mobile  development <br />
+                        backed by data experts. Security, <br />
+                        scalability, availability and analytics<br /> 
+                        and a great user experience.
                     </div>
                     <div class="headertext-center-small hidden-xs">
-                        Our data science, big data and infrastructure specialist and<br />
-                        industry leaders have advanced skills in integration services,<br />
-                        back-end architecture and data security to make your mobile<br />
-                        applications connect to your existing systems and the business <br />
-                        intelligence to interact with your data.
+                        Connect to your data from any mobile device. Custom mobile<br />
+                        development backed by data experts. Security, scalability, <br />
+                        availability and analytics and a great user experience.
                     </div>
                     <br>
                     <a class="btn btn-lg text header-btn-sm1" style="width:100%" href="#stream">Process</a>
@@ -272,28 +239,23 @@
             </div>
             <div class="row headersmall2" id="stream">
                 <div class="text-vertical-center col-md-4">
-                    <div class="headertext-h1-small" style="color:white;">Streamlined Development</div>
+                    <div class="headertext-h1-small" style="color:white;">Accelerated Mobility</div>
                     <div class="headertext-center-small hidden-sm" style="color:white;">
-                        Our vast library of functions reduces<br />
-                        the time of mobile delivery and <br />
-                        development while increasing longevity<br />
-                        of your product functions by using a <br />
-                        suite of services for integration<br />
-                        layer, mobile security, data transport,<br />
-                        offline logic and application analytics.
+                        Our Accelerators are pre-built and <br />
+                        tested modules that we use to <br />
+                        quickly deliver high quality <br />
+                        mobile solutions. 
                     </div>
                     <div class="headertext-center-small hidden-xs" style="color:white;">
-                        Our vast library of functions reduces the time of mobile delivery and<br />
-                        development while increasing longevity of your product functions by using<br />
-                        a suite of services for integration layer, mobile security, data transport,<br />
-                        offline logic and application analytics.
+                        Our Accelerators are pre-built and tested modules that we use to <br/>
+                        quickly deliver high quality mobile solutions. 
                     </div>
                     <br>
                     <a class="btn btn-lg text header-btn-sm1" style="background-color:skyblue; width:100%;" href="#contact">Contact Us</a>
                 </div>
             </div>
         </div>
-        <div class="container hidden-sm hidden-xs" style="width:800px;">
+        <div id="process" class="container hidden-sm hidden-xs" style="width:800px;">
             <div class="row" style="text-align:center;">
                 <div class="acceleratortext-h1">Mobile Solution Accelerators</div>
                 <div class="accelerator-center">
@@ -339,7 +301,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="padding-bottom:30px;">
                 <div class="accelerator-div-bottom" style="width:630px; margin-left:75px; height:180px;">
                     <div>
                         <img src="img/Delivery_Icon.svg" style="width:114px; height:114px; float: left; margin-left:40px;"
@@ -356,7 +318,7 @@
             </div>
         </div>
 
-        <div class="hidden-md hidden-lg hidden-xl">
+        <div id="process" class="hidden-md hidden-lg hidden-xl">
             <div class="row" style="text-align:center;">
                 <div class="acceleratortext-h1-small">Mobile Solution Accelerators</div>
                 <div class="accelerator-center-small hidden-sm hidden-md">
@@ -469,7 +431,7 @@
         </div>
 
         <!--Team-->
-        <div class="row" style="text-align:center;">
+        <div class="row" style="text-align:center;" id="leadership">
             <div class="text">
                 <div class="team-h3 hidden-xs" style="padding-bottom:50px;">
                     Leadership
@@ -787,7 +749,7 @@
         </div>
 
         <!-- Footer -->
-        <div style="border-top:1px solid black;">
+        <div style="border-top:1px solid black;" id="contact">
             <div class="row hidden-xs hidden-sm hidden-md">
                 <div class="col-lg-6" style="height:300px;">
                     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12611.970318332944!2d-122.40707235364697!3d37.79021366882881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe415fef1c46ecef9!2sDesignMind!5e0!3m2!1sen!2sus!4v1453938171867" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
