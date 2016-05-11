@@ -1,8 +1,30 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta name="description" content="DesignMind Mobile is a San Francisco based mobile development and strategy company serving complete application development including Big Data, Business Intelligence and Data Analytics." />
+    <meta name="keywords" content="san francisco iPhone development, iPhone developers, iPhone apps, iOS development, iOS developers, iPad development, iPad developers, iPad apps, mobile app design, mobile app development, 
+          mobile app developers, mobile application development, mobile application developer, product consultants, product design, software consultants, android developers, andriod, swift, java, firebase, azure, aws, aws mobile, azure mobile apps,"/>
+    <title>Contact Mobile Development | San Francisco Mobile Development Agency and Data Experts</title>
 	<meta charset="utf-8" />
+    <meta name="robots" content="noodp,noydir">
+
+    <link rel="canonical" href="http://designmindmobile.com/contact_form.html" />
+    <link rel="publisher" href="https://plus.google.com/103267323369198800190/about" />
+    <link rel="Shortcut Icon" href="http://c8zyre51kh-flywheel.netdna-ssl.com/wp-content/themes/designmindRWD/images/favicon.ico" type="image/x-icon" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Contact DesignMind San Francisco App Development | Custom Mobile App Developers" />
+    <meta property="og:description" content="DesignMind Mobile is the thought leader in mobile application development, design and strategy." />
+    <meta property='og:image' content="http://designmindmobile.com/img/DMMobileLogo.png">
+
+
+    <meta property='og:url' content="https://designmindmobile.com/" />
+    <meta property="og:site_name" content="designmindmobile">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="DesignMind Mobile is a San Francisco based mobile development and strategy company serving complete application development including Big Data, Business Intelligence and Data Analytics." />
+    <meta name="twitter:title" content="Contact San Francisco App Development | Custom Mobile App Developers" />
+    <meta name="twitter:site" content="@designmindmobile" />
+    <meta name="twitter:creator" content="@k3street" />
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -47,7 +69,7 @@
                                 <a href="index.html#leadership" style="padding-right:60px;">Leadership</a>
                             </li>
                             <li>
-                                <a href="#" style="padding-right:60px;">Clients</a>
+                                <a href="index.html#toolbox" style="padding-right:60px;">Toolbox</a>
                             </li>
                             <li>
                                 <a href="index.html#contact" style="padding-right:60px;">Contact</a>
@@ -99,13 +121,13 @@
                                 <br>
                                 <ul class="list-inline" style="padding-top:40px;">
                                     <li>
-                                        <a href="https://www.facebook.com/DesignMindSoftware"><img src="img/Facebook_Icon.png" alt="Facebook Link" /></a>
+                                        <a href="https://www.facebook.com/DesignMindSoftware"><img src="img/Facebook_Icon.png" alt="Mobile development Facebook Link" /></a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/designminddata"><img src="img/Twitter_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                                        <a href="https://twitter.com/designminddata"><img src="img/Twitter_Icon.png" alt="Mobile development Facebook Link" style="padding-left:10px;" /></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/company/designmind"><img src="img/LinkedIn_Icon.png" alt="Facebook Link" style="padding-left:10px;" /></a>
+                                        <a href="https://www.linkedin.com/company/designmind"><img src="img/LinkedIn_Icon.png" alt="Mobile development Facebook Link" style="padding-left:10px;" /></a>
                                     </li>
                                 </ul>
                                 <!--<p class="text-muted">Copyright &copy; DesignMind 2016</p>-->
@@ -118,61 +140,7 @@
             <script src="js/bootstrap.min.js"></script>
             <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.9.min.js"></script>
             <script type="text/javascript">
-                $("#myBtn").click(function () {
-                    SendEmail();
-                });
-                function SendEmail1() {
-                    $.ajax({
-                        type: 'POST',
-                        url: 'https://<dc>.api.mailchimp.com/3.0',
-                        data: { "test": true },
-                        dataType: 'json',
-                        success: function (data) {
-                            console.log(data.username);
-                        },
-                        beforeSend: function (req) {
-                            req.setRequestHeader('Authorization', auth); // <<<<----- USED HERE
-                        },
-                    });
-                }
-                function SendEmail() {
-                    var ses = new AWS.SES({ apiVersion: '2010-12-01' });
-                    var params = {
-                        Destination: { /* required */
 
-                            ToAddresses: [
-                              'krichards@designmind.com',
-                              /* more items */
-                            ]
-                        },
-                        Message: { /* required */
-                            Body: { /* required */
-                                Html: {
-                                    Data: 'Test'
-                                },
-                                Text: {
-                                    Data: 'Test'
-                                }
-                            },
-                            Subject: { /* required */
-                                Data: 'Test'
-                            }
-                        },
-                        Source: 'krichards@designmind.com', /* required */
-                        ReplyToAddresses: [
-                          'kimate@hotmail.com',
-                          /* more items */
-                        ]
-                    };
-                    debugger;
-                    ses.sendEmail(params, function (err, data) {
-                        if (err) {
-                            console.log(err, err.stack);
-                            alert(err.stack);
-                        }// an error occurred
-                        else console.log(data);           // successful response
-                    });
-                }
             </script>
 </body>
 </html>

@@ -457,6 +457,16 @@ hr.small {
     min-width:600px;
 }
 
+.toolbox-text{
+    font-size:15px;
+    font-weight:bolder;
+}
+.toolbox-text-blue{
+    font-size:15px;
+    color:#4378bb;
+    font-weight:bolder;
+}
+
 .team-h3 {
     font-size:60px;
     color:#373737;
