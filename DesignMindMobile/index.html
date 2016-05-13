@@ -55,18 +55,21 @@
     <script type="text/javascript" src="js/unslider-min.js"></script>
     <script>
 		jQuery(document).ready(function($) {
-		    $('.my-slider').unslider({
+		    var $slide = $('.my-slider').unslider({
 		        autoplay: true,
 		        speed: 750,
 		        dots: true,
 		        nav: true,
 		        delay: 7000,
 		        arrows: false,
-		        fluid: true,
-		        fade: true,
-                infinite: true
+		        infinite: true
 		    });
-		});
+		    $slide.on('mouseover', function () {
+		                $slide.data('unslider').stop();
+		            }).on('mouseout', function () {
+		                $slide.data('unslider').start();
+		            });
+        });
     </script>
     <script>
 	$(function() {
@@ -213,7 +216,7 @@
             </div>
         </div>-->
 
-        <div id="top" class="hidden-xl hidden-lg hidden-md" style="padding-left:20px;">
+        <div class="hidden-xl hidden-lg hidden-md" style="padding-left:20px;">
             <div class="row headersmall">
                 <div class="text-vertical-center col-md-4">
                     <div class="headertext-h1-small" style="color:steelblue;">Complete Mobile Development.</div>
@@ -231,7 +234,7 @@
                         Our combined mobile and database skills are unique among Bay Area agencies.
                     </div>
                     <br>
-                    <a class="btn text header-btn-sm1" style="background-color:green; width:100%;" href="#partner">Get Started</a>
+                    <a class="btn text header-btn-sm1" style="background-color:green; width:75%;" href="#partner">Get Started</a>
                 </div>
             </div>
             <div class="row headersmall1" id="partner">
@@ -267,7 +270,7 @@
                         quickly deliver high quality mobile solutions. 
                     </div>
                     <br>
-                    <a class="btn btn-lg text header-btn-sm1" style="background-color:skyblue; width:100%;" href="#contact">Contact Us</a>
+                    <a class="btn btn-lg text header-btn-sm1" style="background-color:skyblue; width:75%;" href="#contact">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -280,7 +283,7 @@
             <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center; width:630px; margin-left:60px;">
                 <div class="accelerator-div" style="float:left; padding-bottom:45px;">
                     <img src="img/Apple.png"  alt="apple icon" style="padding-bottom:40px;" />
-                    <div class="text toolbox-text"><text>We use Apple's XCode language </text><text class="toolbox-text-blue">Swift</text><text>, </text><br/>
+                    <div class="text toolbox-text"><text class="toolbox-text-blue">Swift</text><text>, </text><br/>
                         <text class="toolbox-text-blue">Objective-C</text> <text> and our own custom</text><br/>
                         <text class="toolbox-text">library of functions</text>
                     </div>
@@ -299,19 +302,66 @@
             <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center; width:630px; margin-left:60px;">
                 <div class="accelerator-div" style="float:left; padding-bottom:45px;">
                     <img src="img/Xamarin.png" alt="Xamarin icon" style="padding-bottom:40px; width:200px; height:114px; padding-top:45px;" />
-                    <div class="text toolbox-text" style="padding-top:45px;">
+                    <div class="text toolbox-text" style="padding-top:25px;">
+                        <text>Code once and modify the UI for </text><br /><text class="toolbox-text-blue">rapid development</text><text>, </text><br />
+                        <text class="toolbox-text-blue">Html5/Angular.Js</text><text>, responsive websites</text><br />
+                        <text class="toolbox-text">and libraries like </text><text class="toolbox-text-blue">Node.Js</text></div>
+                </div>
+                <div class="accelerator-div" style="float:right; padding-bottom:45px;">
+                    <img src="img/Salesforce.png" alt="Salesforce icon" style="padding-bottom:40px; width:200px; height:160px; padding-top:25px;" />
+                    <div class="text toolbox-text">
+                        <text>Conections to services in the Cloud.</text><text class="toolbox-text-blue">SAP</text><text>, </text><br />
+                        <text class="toolbox-text-blue">Azure</text><text>, </text>
+                        <text class="toolbox-text-blue">AWS</text> <text> and</text><text class="toolbox-text-blue">Google API</text><br />
+                        <text class="toolbox-text">and others to build applications faster.</text>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container hidden-md hidden-lg hidden-xl" style="text-align:center;">
+            <div class="row" style="text-align:center;">
+                <div class="acceleratortext-h1-small">Toolbox</div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center;">
+                <div class="accelerator-div" style="padding-bottom:45px;">
+                    <img src="img/Apple.png" alt="apple icon" style="padding-bottom:40px;" />
+                    <div class="text toolbox-text">
                         <text>We use Apple's XCode language </text><text class="toolbox-text-blue">Swift</text><text>, </text><br />
                         <text class="toolbox-text-blue">Objective-C</text> <text> and our own custom</text><br />
                         <text class="toolbox-text">library of functions</text>
                     </div>
                 </div>
-                <div class="accelerator-div" style="float:right; padding-bottom:45px;">
-                    <img src="img/Salesforce.png" alt="android icon" style="padding-bottom:40px; width:200px; height:160px; padding-top:25px;" />
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center;">
+                <div class="accelerator-div" style="padding-bottom:45px;">
+                    <img src="img/Android.png" alt="android icon" style="padding-bottom:40px;" />
                     <div class="text toolbox-text">
                         <text>We use </text><text class="toolbox-text-blue">Android framework</text><text>, Manufacturer </text><br />
                         <text class="toolbox-text-blue">SDK's</text><text>, </text>
                         <text class="toolbox-text-blue">Virtual Displays</text> <text> and</text><text class="toolbox-text-blue">Cloud Testing</text><br />
                         <text class="toolbox-text">to ensure cross device performance</text>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center;">
+                <div class="accelerator-div" style="padding-bottom:45px;">
+                    <img src="img/Xamarin.png" alt="Xamarin icon" style="padding-bottom:40px; width:200px; height:114px; padding-top:45px;" />
+                    <div class="text toolbox-text" style="padding-top:25px;">
+                        <text>Code once and modify the UI for </text><br /><text class="toolbox-text-blue">rapid development</text><text>, </text><br />
+                        <text class="toolbox-text-blue">Html5/Angular.Js</text><text>, responsive websites</text><br />
+                        <text class="toolbox-text">and libraries like </text><text class="toolbox-text-blue">Node.Js</text>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px; margin-bottom:30px; text-align:center;">
+                <div class="accelerator-div" style="padding-bottom:45px;">
+                    <img src="img/Salesforce.png" alt="Salesforce icon" style="padding-bottom:40px; width:200px; height:160px; padding-top:25px;" />
+                    <div class="text toolbox-text">
+                        <text>Conections to services in the Cloud.</text><text class="toolbox-text-blue">SAP</text><text>, </text><br />
+                        <text class="toolbox-text-blue">Azure</text><text>, </text>
+                        <text class="toolbox-text-blue">AWS</text> <text> and</text><text class="toolbox-text-blue">Google API</text><br />
+                        <text class="toolbox-text">and others to build applications faster.</text>
                     </div>
                 </div>
             </div>
@@ -355,7 +405,7 @@
                             </a>
                             </h5>
                             </div>
-                            <div class="col-lg-2 col-lg-offset-1">
+                            <div class="col-lg-2 col-lg-offset-1 hidden-lg">
                                 <a href="https://www.linkedin.com/pulse/gartner-says-demand-enterprise-mobile-apps-outstrip-five-richards?trk=mp-reader-card" class="post-thumb" target="_blank">
                             <img src="https://media.licdn.com/media-proxy/ext?w=310&amp;h=169&amp;f=t&amp;hash=qjNGhHhhm6g6ePbM7SB06tyysNw%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6nlh8Tw1It6a2FowGz60oISJLOTW3hGTrpopfZPiy3OajbebLOoF0WZ11w5XVDHp7ZMUGQY-LNcu-eDK0A8eOcIPmDTA4_Xi46qV1Iuf8PFA0KkZ_0P8ihaAFp6_t0WhqlHrTDa38LMC8O993bA7aWI00W" alt="Gartner Says Demand for Enterprise Mobile Apps Will Outstrip Available Development Capacity Five to One" width="185" height="135">
                                 </a>
@@ -367,8 +417,11 @@
                             </div>
                     </div>
                 </div>
-                <div style="padding-top:20px; padding-bottom:15px;">
+                <div class="hidden-sm hidden-xs" style="padding-top:20px; padding-bottom:15px;">
                     <a class="btn btn-lg text header-btn-small" href="https://www.linkedin.com/today/author/0_2LlEC5Y84zSSQC73-eHnd3?trk=prof-sm"  target="_blank">More Blogs</a>
+                </div>
+                <div class="hidden-md hidden-lg hidden-xl" style="padding-top:20px; padding-bottom:15px;">
+                    <a class="btn btn-lg text header-btn-sm1" href="https://www.linkedin.com/today/author/0_2LlEC5Y84zSSQC73-eHnd3?trk=prof-sm" target="_blank">More Blogs</a>
                 </div>
             </div>
         </div>
@@ -384,7 +437,7 @@
                 <div class="accelerator-center">
                     Get to the completion line faster with client and server side libraries of functions that come with<br />
                     streamlined application development and delivery. Our modules contain common requirements<br />
-                    accross multiple platforms including iOS and Android. Test across many devices in the<br />
+                    across multiple platforms including iOS and Android. Test across many devices in the<br />
                     cloud and automate delivery of mission critical updates with 100% confidence of success.
                 </div>
             </div>
@@ -517,34 +570,20 @@
                     <div style="width:40px; float:left;">&nbsp;</div>
                     <div style="padding-top:50px; float:left;">
                         <div style="font-size:38px; color:#3c2f29;">
-                            Rapid Application Development Frameworks
+                            Our Accelerators at Work
                         </div>
-                        <div class="text hidden-xs" style="padding-top:30px; font-size:18px;">
-                            <!--Realize your development goals in a reduced timeline using industry standard framework libraries and the <br />
-                            latest in cloud services. Connect with SAP, Salesforce, Dynamics CRM, social media and notifications <br />
-                            services in a secure and efficient environment. Experience a reduced delivery cycle while utilizing our <br />
-                            User Experience, Design and Development expertise in coordination with the skill and expertise that you already<br />
-                            know and trust. Complete application development means building the infrastruscture, security,  Data <br />
-                            Analytics and Business Intelligence, design and build with DesignMind today.-->
-                            Mature Development Process
-                            &middot; User Experience & Visual Design
-                            &middot; Strategy & Rationalization
-                            &middot; Framework & Services Library
-                            &middot; Automated Build
-                            &middot; Cloud Testing
-                            &middot; Demo & Delivery
+                        <div class="text hidden-xs" style="padding-top:30px; font-size:28px;">
+                            They needed a mobile app to serve their customers more accurately and efficiently.
+                            Leveraging our existing technology and business acumen, our team was able to exceed 
+                            their expectations, within their budget and aggressive timeline.
                         </div>
-                        <div class="hidden-xs" style="padding-top:20px; padding-bottom:15px;">
+                        <div class="hidden-xs" style="padding-top:65px; padding-bottom:15px;">
                             <a class="btn btn-lg text header-btn-small" href="#contact">See How We Built It</a>
                         </div>
                         <div class="text visible-xs" style="padding-top:30px; font-size:18px; word-wrap:normal; word-break:break-word;">
-                            Mature Development Process
-                            &middot; User Experience & Visual Design
-                            &middot; Strategy & Rationalization
-                            &middot; Framework & Services Library
-                            &middot; Automated Build
-                            &middot; Cloud Testing
-                            &middot; Demo & Delivery
+                            They needed a mobile app to serve their customers more accurately and efficiently.
+                            Leveraging our existing technology and business acumen, our team was able to< 
+                            exceed their expectations, within their budget and aggressive timeline.
                         </div>
                         <div class="visible-xs" style="padding-top:20px; padding-bottom:15px; padding-left:20px; padding-right:20px;">
                             <a class="btn btn-group-sm text header-btn-sm1" style="font-size:28px;" href="#contact">Learn More</a>
@@ -557,10 +596,10 @@
         <!--Team-->
         <div class="row" style="text-align:center;" id="leadership">
             <div class="text">
-                <div class="team-h3 hidden-xs" style="padding-bottom:50px;">
+                <div class="team-h3 hidden-xs" style="padding-bottom:50px; padding-top:30px; font-weight:lighter;">
                     Leadership
                 </div>
-                <div class="team-h3 hidden-sm hidden-md hidden-lg hidden-xl" style="padding-bottom:40px;">
+                <div class="team-h3 hidden-sm hidden-md hidden-lg hidden-xl" style="padding-bottom:40px; font-weight:lighter;">
                     Leadership
                 </div>
             </div>
@@ -575,7 +614,7 @@
                     <img src="img/20160416_183419finlight.jpg" alt="Kimate Richards photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-xs">
-                    <div class="team-h3" style="font-weight:lighter; padding-top:20px; text-align:left;">
+                    <div class="team-h3" style="font-weight:lighter; padding-top:10px; text-align:left;">
                         <p>Mobile Solutions Architect</p>
                     </div>
                     <div class="team-text-blue" style="text-align:left; padding-right:10px;">
@@ -624,7 +663,7 @@
                     <img src="img/Mark-Kidwell-DesignMind-San-Francisco-260x2601.jpg" alt="Mark Kidwells photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-xs">
-                    <div class="team-h3" style="font-weight:lighter; padding-top:20px; text-align:right;">
+                    <div class="team-h3" style="font-weight:lighter; padding-top:10px; text-align:right;">
                         <p>Big Data</p>
                     </div>
                     <div class="team-text-blue" style="text-align:right; padding-right:10px;">
@@ -671,10 +710,10 @@
         <div class="row" style="text-align:center; border-top:1px solid #7fa0d1;">
             <div class="text col-lg-offset-3">
                 <div class="hidden-xs" style="float:left;">
-                    <img src="img/Jacob.png" alt="Jacobs photo" style="padding-top:1px; padding-right:30px; height:280px; width:280px;" />
+                    <img src="img/JacobWilen_DesignMind.jpg" alt="Jacobs photo" style="padding-top:1px; padding-right:30px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-sm hidden-md hidden-lg hidden-xl" style="float:left; margin-right:100px;">
-                    <img src="img/Jacob.png" alt="Jacobs photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
+                    <img src="img/JacobWilen_DesignMind.jpg" alt="Jacobs photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-xs">
                     <div class="team-h3" style="font-weight:lighter; padding-top:10px; text-align:left;">
@@ -730,7 +769,7 @@
                     <img src="img/Angel.png" alt="Mark Kidwells photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-xs">
-                    <div class="team-h3" style="font-weight:lighter; padding-top:20px; text-align:right;">
+                    <div class="team-h3" style="font-weight:lighter; padding-top:10px; text-align:right;">
                         <p>Business Intelligence</p>
                     </div>
                     <div class="team-text-blue" style="text-align:right; padding-right:10px;">
@@ -739,14 +778,16 @@
                         <a href="https://www.linkedin.com/in/angelstreamline"><img src="img/LinkedIn_Icon_profile.png" alt="LinkedIn Link" /></a>
                     </div>
                     <div class="text hidden-md hidden-sm" style="text-align:right;">
-                        My expertise is in Microsoft SQL Server BI tools, SharePoint, and Tableau.<br />
-                        I focus on effective visualization, process-driven Data Modeling, ETL, and<br />
-                        Data Mining.
+                        My expertise is in Microsoft SQL Server BI tools, Power BI, and Tableau.<br/>
+                        I enjoy effective visualization and process-driven Data Modeling. My <br/>
+                        passion is learning where we can add the most value for our clients.
                     </div>
                     <div class="text hidden-xl hidden-lg" style="text-align:right; padding-bottom:35px; padding-left:30px;">
-                        My expertise is in Microsoft SQL Server BI tools, SharePoint, and<br />
-                        Tableau. I focus on effective visualization, process-driven Data<br />
-                        Modeling, ETL, and Data Mining.
+                        My expertise is in Microsoft SQL Server BI tools, Power BI, and<br /> 
+                        Tableau. I enjoy effective visualization and process-driven Data<br />
+                        Modeling. My passion is learning where we can add the most value for<br />
+                        our clients.
+
                     </div>
                 </div>
                 <div class="hidden-sm hidden-md hidden-lg hidden-xl" style="padding-left:25px;">
@@ -764,6 +805,11 @@
                         BI tools, SharePoint, and Tableau. I focus<br />
                         on effective visualization, process-driven<br />
                         Data Modeling, ETL, and Data Mining.
+                        My expertise is in Microsoft SQL Server <br/>
+                        BI tools, Power BI, and Tableau. I enjoy <br/>
+                        effective visualization and process-driven Data<br />
+                        Modeling. My passion is learning where we can<br/>
+                        add the most value for our clients.
                     </div>
                 </div>
             </div>
@@ -779,7 +825,7 @@
                     <img src="img/MarkG.png" alt="Marks photo" style="padding-top:1px; padding-left:25px; height:280px; width:280px;" />
                 </div>
                 <div class="hidden-xs">
-                    <div class="team-h3" style="font-weight:lighter; padding-top:20px; text-align:left;">
+                    <div class="team-h3" style="font-weight:lighter; padding-top:10px; text-align:left;">
                         <p>Delivery and Relationship</p>
                     </div>
                     <div class="team-text-blue" style="text-align:left; padding-right:10px;">
