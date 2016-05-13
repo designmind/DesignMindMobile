@@ -110,7 +110,9 @@
     <Content Include="img\ActiveSlider_Button.png" />
     <Content Include="img\Android.png" />
     <Content Include="img\Angel.png" />
+    <Content Include="img\Angel_Abundez_Business-Intellingece.jpg" />
     <Content Include="img\Apple.png" />
+    <Content Include="img\cloud services.jpg" />
     <Content Include="img\Communications_Icon.svg" />
     <Content Include="img\David.png" />
     <Content Include="img\Delivery_Icon.svg" />
@@ -149,6 +151,7 @@
     <Content Include="img\SawyerBrewing_PreviewImage.png" />
     <Content Include="img\Security_Icon.svg" />
     <Content Include="img\Streamlined_Development_RETINA.png" />
+    <Content Include="img\Toolbox.jpg" />
     <Content Include="img\Twitter_Icon.png" />
     <Content Include="img\Twitter_Icon_profile.png" />
     <Content Include="img\Xamarin.png" />
