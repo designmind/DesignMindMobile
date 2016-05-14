@@ -112,6 +112,10 @@
     <Content Include="img\Angel.png" />
     <Content Include="img\Angel_Abundez_Business-Intellingece.jpg" />
     <Content Include="img\Apple.png" />
+    <Content Include="img\BlogImage_1.png" />
+    <Content Include="img\BlogImage_2.png" />
+    <Content Include="img\BlogImage_3.png" />
+    <Content Include="img\Blog_Workshop.png" />
     <Content Include="img\cloud services.jpg" />
     <Content Include="img\Communications_Icon.svg" />
     <Content Include="img\David.png" />
@@ -154,6 +158,7 @@
     <Content Include="img\Toolbox.jpg" />
     <Content Include="img\Twitter_Icon.png" />
     <Content Include="img\Twitter_Icon_profile.png" />
+    <Content Include="img\Workshop_Photo.png" />
     <Content Include="img\Xamarin.png" />
     <Content Include="img\YourEnterprisePartner_RETINA.png" />
     <Content Include="index.html" />
