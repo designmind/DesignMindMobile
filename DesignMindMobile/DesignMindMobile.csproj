@@ -153,6 +153,10 @@
     <Content Include="img\phone-calling-plan-business.png" />
     <Content Include="img\Salesforce.png" />
     <Content Include="img\SawyerBrewing_PreviewImage.png" />
+    <Content Include="img\Sawyer_Subpage_challenge.png" />
+    <Content Include="img\Sawyer_Subpage_result.png" />
+    <Content Include="img\Sawyer_Subpage_solution.png" />
+    <Content Include="img\Sawyer_Subpage_test.png" />
     <Content Include="img\Security_Icon.svg" />
     <Content Include="img\Streamlined_Development_RETINA.png" />
     <Content Include="img\Toolbox.jpg" />
@@ -248,6 +252,7 @@
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />
     <None Include="Properties\PublishProfiles\DesignMindMobile.pubxml" />
+    <Content Include="Sawyer_Subpage.html" />
     <Content Include="test.html" />
     <Content Include="videos\.htaccess" />
     <Content Include="videos\20160128_151643.oggtheora.ogv" />
