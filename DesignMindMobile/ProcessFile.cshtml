@@ -1,0 +1,56 @@
+﻿@{
+    var customerName = Request["FullName"];
+    var customerEmail = Request["Email"];
+    var customerPhone = Request["Phone"];
+    var errorMessage = "";
+    var debuggingFlag = true;
+
+    try
+    {
+        // Initialize WebMail helper
+        WebMail.SmtpServer = "smtp.gmail.com";
+        WebMail.SmtpPort = 465;
+        WebMail.UserName = "tamonitise@gmail.com";
+        WebMail.Password = "Brea0607@";
+        WebMail.From = "tamonitise@gmail.com";
+
+
+        // Attach file and send email
+        WebMail.Send(to: "krichards@designmind.com",
+            subject: "Mobile Web Lead",
+            body: "From: " + customerName + " <br/>phone: " + customerPhone + " <br/>email: " + customerEmail);
+    }
+        catch (Exception ex)
+    {
+        errorMessage = ex.Message;
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request for Assistance</title>
+</head>
+<body>
+    <p>Sorry to hear that you are having trouble, <b>@customerName</b>.</p>
+    @if (errorMessage == "")
+    {
+        <p><b>@customerName</b>, thank you for your interest.</p>
+        <p>
+            Thank you for your response, we will contact your shortly.
+        </p>
+    }
+    else {
+        <p><b>The email was <em>not</em> sent.</b></p>
+        <p>
+            Please check that the code in the ProcessRequest page has
+            correct settings for the SMTP server name, a user name,
+            a password, and a "from" address.
+        </p>
+        if (debuggingFlag)
+        {
+            <p>The following error was reported:</p>
+            <p><em>@errorMessage</em></p>
+        }
+    }
+</body>
+</html>

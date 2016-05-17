@@ -36,3 +36,16 @@ C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\Design
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Debug\DesignMindMobile.g.resources
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\AWSSDK.dll
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\AWSSDK.pdb
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Helpers.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Mvc.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Razor.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.Deployment.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.Razor.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Helpers.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Mvc.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.Razor.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.Deployment.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Web.WebPages.Razor.xml
