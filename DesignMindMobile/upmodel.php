@@ -55,7 +55,6 @@
     <meta property="og:description" content="DesignMind Mobile is the thought leader in mobile application development, design and strategy." />
     <meta property='og:image' content="http://designmindmobile.com/img/DMMobileLogo.png">
 
-
     <meta property='og:url' content="https://designmindmobile.com/" />
     <meta property="og:site_name" content="designmindmobile">
     <meta name="twitter:card" content="summary" />
