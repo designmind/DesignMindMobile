@@ -126,7 +126,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="contact_form.html" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\slick.css" />
     <Content Include="css\styles.css" />
@@ -247,14 +246,11 @@
     <Content Include="img\upmodel.jpg" />
     <Content Include="img\upmodel_android.jpg" />
     <Content Include="img\xamarin.png" />
-    <Content Include="index.html" />
     <Content Include="index1.html" />
     <Content Include="index2.html" />
     <Content Include="js\map.js" />
     <Content Include="js\slick.min.js" />
     <Content Include="js\unslider-min.js" />
-    <Content Include="leadership.html" />
-    <Content Include="mobile-workshops.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -336,20 +332,20 @@
     <Content Include="css\variables.less" />
     <None Include=".bin\node.cmd" />
     <Content Include="contact_form.cshtml" />
-    <Content Include="ProcessFile.cshtml" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="contact_form.php" />
+    <Content Include="index.php" />
+    <Content Include="leadership.php" />
     <None Include="Properties\PublishProfiles\designmind %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />
     <None Include="Properties\PublishProfiles\DesignMindMobile.pubxml" />
-    <Content Include="sawyer.html" />
     <Content Include="Sawyer_Subpage.html" />
     <Content Include="test.html" />
-    <Content Include="upmodel.html" />
     <Content Include="videos\.htaccess" />
     <Content Include="videos\20160128_151643.oggtheora.ogv" />
     <Content Include="videos\20160128_151643.webmhd.webm" />
@@ -369,6 +365,8 @@
     <None Include="Resource\SourceSansPro-Regular.otf" />
     <None Include="Resource\SourceSansPro-Semibold.otf" />
     <None Include="Resource\SourceSansPro-SemiboldIt.otf" />
+    <Content Include="sawyer.php" />
+    <Content Include="upmodel.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

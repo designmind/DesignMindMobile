@@ -1,4 +1,39 @@
-﻿<!DOCTYPE html>
+<?php
+  if (isset($_POST["submit"])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'DesignMind Mobile';
+    $to = 'mobile@designmind.com';
+    $subject = 'Message from Contact';
+
+    $body ="From: $name\n E-Mail: $email\n Message:\n $message";
+    // Check if name has been entered
+    if (!$_POST['name']) {
+      $errName = 'Please enter your name';
+    }
+
+    // Check if email has been entered and is valid
+    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+      $errEmail = 'Please enter a valid email address';
+    }
+
+    //Check if message has been entered
+    if (!$_POST['message']) {
+      $errMessage = 'Please enter your message';
+    }
+
+    // If there are no errors, send the email
+    if (!$errName && !$errEmail && !$errMessage) {
+      if (mail ($to, $subject, $body, $from)) {
+        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+      } else {
+        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+      }
+    }
+  }
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +45,7 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noodp,noydir">
 
-    <link rel="canonical" href="http://designmindmobile.com/Sawyer_Subpage.html" />
+    <link rel="canonical" href="http://designmindmobile.com/sawyer.php" />
     <link rel="publisher" href="https://plus.google.com/103267323369198800190/about" />
     <link rel="Shortcut Icon" href="http://c8zyre51kh-flywheel.netdna-ssl.com/wp-content/themes/designmindRWD/images/favicon.ico" type="image/x-icon" />
     <meta property="og:locale" content="en_US" />
@@ -45,20 +80,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/index.html#top">
+          <a class="navbar-brand" href="/index.php#top">
             <img src="img/logo.jpg" alt="DesignMind Mobile Enterprise" description="Logo for DesignMind Mobile." />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav pull-right">
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/index.html#toolbox">Toolbox</a></li>
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/index.html#workshops">Process</a></li>
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/leadership.html">Leadership</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/index.php#toolbox">Toolbox</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/index.php#workshops">Process</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/leadership.php">Leadership</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accelerators <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/sawyer.html">Sawyer Brewing</a></li>
-                <li><a href="/upmodel.html">UpModel</a></li>
+                <li><a href="/sawyer.php">Sawyer Brewing</a></li>
+                <li><a href="/upmodel.php">UpModel</a></li>
               </ul>
             </li>
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">Contact</a></li>
@@ -134,23 +169,29 @@
           <a href="https://twitter.com/DesignMindData" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/company/designmind?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
         </div>
-        <form role="form" action="" method="post" class="col-sm-8" >
+        <form class="col-sm-8" role="form" method="post" action="index.php">
           <div class="row">
-            <div class="form-group col-sm-6">
-              <label for="InputName">Your Name</label>
-              <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-            </div>
-            <div class="form-group col-sm-6">
-              <label for="InputEmail">Your Email</label>
-              <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required>
-            </div>
             <div class="form-group col-xs-12">
-              <label for="InputMessage">Message</label>
-              <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+              <?php echo $result; ?>
             </div>
+  					<div class="form-group col-sm-6">
+  						<label for="name">Name</label>
+  						<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+  						<?php echo "<p class='text-danger'>$errName</p>";?>
+  					</div>
+  					<div class="form-group col-sm-6">
+  						<label for="email">Email</label>
+  						<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+  						<?php echo "<p class='text-danger'>$errEmail</p>";?>
+  					</div>
+  					<div class="form-group col-xs-12">
+  						<label for="message">Message</label>
+  						<textarea class="form-control" rows="5" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+  						<?php echo "<p class='text-danger'>$errMessage</p>";?>
+  					</div>
+            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
           </div>
-          <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-        </form>
+				</form>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
