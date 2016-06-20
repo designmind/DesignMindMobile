@@ -1,6 +1,40 @@
+<?php
+  if (isset($_POST["submit"])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'DesignMind Mobile';
+    $to = 'mobile@designmind.com';
+    $subject = 'Message from Contact';
+
+    $body ="From: $name\n E-Mail: $email\n Message:\n $message";
+    // Check if name has been entered
+    if (!$_POST['name']) {
+      $errName = 'Please enter your name';
+    }
+
+    // Check if email has been entered and is valid
+    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+      $errEmail = 'Please enter a valid email address';
+    }
+
+    //Check if message has been entered
+    if (!$_POST['message']) {
+      $errMessage = 'Please enter your message';
+    }
+
+    // If there are no errors, send the email
+    if (!$errName && !$errEmail && !$errMessage) {
+      if (mail ($to, $subject, $body, $from)) {
+        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+      } else {
+        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
+      }
+    }
+  }
+?>
 ﻿<!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,12 +87,12 @@
           <ul class="nav navbar-nav pull-right">
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#toolbox">Toolbox</a></li>
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#workshops">Process</a></li>
-            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/leadership.html">Leadership</a></li>
+            <li><a data-toggle="collapse" data-target=".navbar-collapse" href="/leadership.php">Leadership</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Accelerators <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/sawyer.html">Sawyer Brewing</a></li>
-                <li><a href="/upmodel.html">UpModel</a></li>
+                <li><a href="/sawyer.php">Sawyer Brewing</a></li>
+                <li><a href="/upmodel.php">UpModel</a></li>
               </ul>
             </li>
             <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">Contact</a></li>
@@ -136,7 +170,7 @@
         <div class="col-sm-6 col-sm-offset-6 content">
           <h1>Mobile Workshops</h1>
           <p>Strategize, Design, Architect and build your custom solution in only a few days.  Architect and build your custom solutions.</p>
-          <p><a class="btn btn-default" href="/mobile-workshops.html" role="button">Learn more <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
+          <p><a class="btn btn-default" href="/mobile-workshops.php" role="button">Learn more <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>
        </div>
      </div>
     </section>
@@ -188,8 +222,8 @@
             <p>Our clients need mobile apps to serve their customers accurately and efficiently. The DesignMind Mobile team leverages our existing technology and business acumen to exceed expectations, on budget and on time.</p>
             <p>See how our custom mobile apps increased productivity and sales for a few of our clients.</p>
           </div>
-          <a class="btn btn-default pull-left" href="sawyer.html" role="button">Sawyer Brewing</a>
-          <a class="btn btn-default pull-right" href="upmodel.html" role="button">UpModel</a>
+          <a class="btn btn-default pull-left" href="sawyer.php" role="button">Sawyer Brewing</a>
+          <a class="btn btn-default pull-right" href="upmodel.php" role="button">UpModel</a>
         </div>
       </div>
     </section>
@@ -236,23 +270,29 @@
           <a href="https://twitter.com/DesignMindData" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/company/designmind?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
         </div>
-        <form role="form" action="" method="post" class="col-sm-8" >
+        <form class="col-sm-8" role="form" method="post" action="index.php">
           <div class="row">
-            <div class="form-group col-sm-6">
-              <label for="InputName">Your Name</label>
-              <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-            </div>
-            <div class="form-group col-sm-6">
-              <label for="InputEmail">Your Email</label>
-              <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required>
-            </div>
             <div class="form-group col-xs-12">
-              <label for="InputMessage">Message</label>
-              <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+              <?php echo $result; ?>
             </div>
+  					<div class="form-group col-sm-6">
+  						<label for="name">Name</label>
+  						<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+  						<?php echo "<p class='text-danger'>$errName</p>";?>
+  					</div>
+  					<div class="form-group col-sm-6">
+  						<label for="email">Email</label>
+  						<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+  						<?php echo "<p class='text-danger'>$errEmail</p>";?>
+  					</div>
+  					<div class="form-group col-xs-12">
+  						<label for="message">Message</label>
+  						<textarea class="form-control" rows="5" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+  						<?php echo "<p class='text-danger'>$errMessage</p>";?>
+  					</div>
+            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
           </div>
-          <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-        </form>
+				</form>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
