@@ -47,8 +47,7 @@
     // obtain response
     $response = curl_exec($session);
     curl_close($session);
-    // Redirect to thank you page upon successfull completion, will want to build one if you don't alreday have one available
-    header('Location: thanks.html'); // feel free to use whatever title you wish for thank you landing page, but will need to reference that file name in place of the present 'thanks.html'
+
     exit();
 
     // Check if name has been entered
@@ -68,7 +67,6 @@
 
   }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -204,7 +202,7 @@
           <a href="https://twitter.com/DesignMindData" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/company/designmind?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
         </div>
-        <form class="col-sm-8" role="form" method="post" action="index.php">
+        <form class="col-sm-8" role="form" method="post" action="leadership.php">
           <div class="row">
             <div class="form-group col-xs-12">
               <?php echo $response; ?>

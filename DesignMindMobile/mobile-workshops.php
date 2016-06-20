@@ -1,13 +1,55 @@
 <?php
   if (isset($_POST["submit"])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $from = 'DesignMind Mobile';
-    $to = 'mobile@designmind.com';
-    $subject = 'Message from Contact';
+    // use actual sendgrid username and password in this section
+    $url  = 'https://api.sendgrid.com/';
+    $user = 'azure_73cf0d30ea2170150722bc3af384d62d@azure.com'; // place SG username here
+    $pass = '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'; // place SG password here
 
-    $body ="From: $name\n E-Mail: $email\n Message:\n $message";
+    // grabs HTML form's post data; if you customize the form.html parameters then you will need to reference their new new names here
+    $name    = $_POST['name'];
+    $email   = $_POST['email'];
+    $message = $_POST['message'];
+    $from    = 'DesignMind Mobile';
+    $to      = 'mobile@designmind.com';
+    $subject = 'Message from DesignMind Mobile Contact Form';
+
+    // note the above parameters now referenced in the 'subject', 'html', and 'text' sections
+    // make the to email be your own address or where ever you would like the contact form info sent
+    $params = array(
+        'api_user'  => $user,
+        'api_key'   => $pass,
+        'to'        => $to, // set TO address to have the contact form's email content sent to
+        'subject'   => $subject, // Either give a subject for each submission, or set to $subject
+        'html'      => "<html><head><title> Contact Form</title><body>
+        Name: $name\n<br>
+        Email: $email\n<br>
+        Subject: $subject\n<br>
+        Message: $message <body></title></head></html>", // Set HTML here.  Will still need to make sure to reference post data names
+        'text'      => "
+        Name: $name\n
+        Email: $email\n
+        Subject: $subject\n
+        $message",
+        'from'      => "contact@burnsey.com", // set from address here, it can really be anything
+      );
+
+    curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+    $request =  $url.'api/mail.send.json';
+    // Generate curl request
+    $session = curl_init($request);
+    // Tell curl to use HTTP POST
+    curl_setopt ($session, CURLOPT_POST, true);
+    // Tell curl that this is the body of the POST
+    curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
+    // Tell curl not to return headers, but do return the response
+    curl_setopt($session, CURLOPT_HEADER, false);
+    curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+    // obtain response
+    $response = curl_exec($session);
+    curl_close($session);
+
+    exit();
+
     // Check if name has been entered
     if (!$_POST['name']) {
       $errName = 'Please enter your name';
@@ -23,14 +65,6 @@
       $errMessage = 'Please enter your message';
     }
 
-    // If there are no errors, send the email
-    if (!$errName && !$errEmail && !$errMessage) {
-      if (mail ($to, $subject, $body, $from)) {
-        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-      } else {
-        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-      }
-    }
   }
 ?>
 <!DOCTYPE html>
@@ -139,7 +173,7 @@
           <a href="https://twitter.com/DesignMindData" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/company/designmind?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
         </div>
-        <form class="col-sm-8" role="form" method="post" action="index.php">
+        <form class="col-sm-8" role="form" method="post" action="mobile-workshops.php">
           <div class="row">
             <div class="form-group col-xs-12">
               <?php echo $result; ?>
