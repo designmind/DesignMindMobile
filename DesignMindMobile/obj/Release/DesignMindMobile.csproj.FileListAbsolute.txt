@@ -48,3 +48,10 @@ C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\Design
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.csproj.GenerateResource.Cache
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.dll
 C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.pdb
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\obj\Release\DesignMindMobile.csprojResolveAssemblyReference.cache
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\Newtonsoft.Json.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\SendGrid.CSharp.HTTP.Client.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\SendGrid.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Net.Http.Formatting.dll
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\Newtonsoft.Json.xml
+C:\Users\krichards\Documents\Visual Studio 2015\Projects\DesignMindMobile\DesignMindMobile\bin\System.Net.Http.Formatting.xml
