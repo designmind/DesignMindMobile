@@ -1,72 +1,3 @@
-<?php
-  if (isset($_POST["submit"])) {
-    // use actual sendgrid username and password in this section
-    $url  = 'https://api.sendgrid.com/';
-    $user = 'azure_73cf0d30ea2170150722bc3af384d62d@azure.com'; // place SG username here
-    $pass = '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'; // place SG password here
-
-    // grabs HTML form's post data; if you customize the form.html parameters then you will need to reference their new new names here
-    $name    = $_POST['name'];
-    $email   = $_POST['email'];
-    $message = $_POST['message'];
-    $from    = 'DesignMind Mobile';
-    $to      = 'mobile@designmind.com';
-    $subject = 'Message from DesignMind Mobile Contact Form';
-
-    // note the above parameters now referenced in the 'subject', 'html', and 'text' sections
-    // make the to email be your own address or where ever you would like the contact form info sent
-    $params = array(
-        'api_user'  => $user,
-        'api_key'   => $pass,
-        'to'        => $to, // set TO address to have the contact form's email content sent to
-        'subject'   => $subject, // Either give a subject for each submission, or set to $subject
-        'html'      => "<html><head><title> Contact Form</title><body>
-        Name: $name\n<br>
-        Email: $email\n<br>
-        Subject: $subject\n<br>
-        Message: $message <body></title></head></html>", // Set HTML here.  Will still need to make sure to reference post data names
-        'text'      => "
-        Name: $name\n
-        Email: $email\n
-        Subject: $subject\n
-        $message",
-        'from'      => "contact@burnsey.com", // set from address here, it can really be anything
-      );
-
-    curl_setopt($curl, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-    $request =  $url.'api/mail.send.json';
-    // Generate curl request
-    $session = curl_init($request);
-    // Tell curl to use HTTP POST
-    curl_setopt ($session, CURLOPT_POST, true);
-    // Tell curl that this is the body of the POST
-    curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-    // Tell curl not to return headers, but do return the response
-    curl_setopt($session, CURLOPT_HEADER, false);
-    curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-    // obtain response
-    $response = curl_exec($session);
-    curl_close($session);
-
-    exit();
-
-    // Check if name has been entered
-    if (!$_POST['name']) {
-      $errName = 'Please enter your name';
-    }
-
-    // Check if email has been entered and is valid
-    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-      $errEmail = 'Please enter a valid email address';
-    }
-
-    //Check if message has been entered
-    if (!$_POST['message']) {
-      $errMessage = 'Please enter your message';
-    }
-
-  }
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -173,32 +104,57 @@
           <a href="https://twitter.com/DesignMindData" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
           <a href="https://www.linkedin.com/company/designmind?trk=top_nav_home" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
         </div>
-        <form class="col-sm-8" role="form" method="post" action="mobile-workshops.php">
-          <div class="row">
-            <div class="form-group col-xs-12">
-              <?php echo $result; ?>
-            </div>
-  					<div class="form-group col-sm-6">
-  						<label for="name">Name</label>
-  						<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
-  						<?php echo "<p class='text-danger'>$errName</p>";?>
-  					</div>
-  					<div class="form-group col-sm-6">
-  						<label for="email">Email</label>
-  						<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
-  						<?php echo "<p class='text-danger'>$errEmail</p>";?>
-  					</div>
-  					<div class="form-group col-xs-12">
-  						<label for="message">Message</label>
-  						<textarea class="form-control" rows="5" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
-  						<?php echo "<p class='text-danger'>$errMessage</p>";?>
-  					</div>
-            <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-          </div>
-				</form>
+          <form action="/" class="col-sm-8" id="searchForm">
+              <div class="row">
+                  <div class="form-group col-sm-6">
+                      <label for="InputName">Your Name</label>
+                      <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                  </div>
+                  <div class="form-group col-sm-6">
+                      <label for="InputEmail">Your Email</label>
+                      <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group col-xs-12">
+                      <label for="InputMessage">Message</label>
+                      <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+                  </div>
+              </div>
+              <input type="submit" value="Submit" class="btn btn-info pull-right" id="btn-save">
+          </form>
+          <label id="submit-label">Your question has been submitted!</label>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+<script>
+        $("#submit-label").hide();
+
+
+      $("#searchForm").submit(function (event) {
+          event.preventDefault();
+          var data = {}
+          data["name"] = $("#InputName").val();
+          data["email"] = $("#InputEmail").val();
+          data["message"] = $("#InputMessage").val();
+
+          $("#btn-save").prop("disabled", true);
+
+          $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "/services/mail",
+              data: JSON.stringify(data),
+              dataType: 'json',
+              timeout: 600000,
+              success: function (data) {
+                  $("#searchForm").hide();
+                  $("#submit-label").show();
+              },
+              error: function (e) {
+                  $("#btn-save").prop("disabled", false);
+              }
+          });
+      });
+</script>

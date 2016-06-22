@@ -364,6 +364,7 @@
     <Content Include="Areas\Services\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Services\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Services\Views\Mail\index.cshtml" />
+    <Content Include="mobile-workshops.html" />
     <None Include="Properties\PublishProfiles\designmind %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />
