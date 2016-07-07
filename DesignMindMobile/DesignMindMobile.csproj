@@ -369,6 +369,7 @@
     <None Include="Properties\PublishProfiles\designmind %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\designmind.pubxml" />
     <None Include="Properties\PublishProfiles\DesignMindMobile.pubxml" />
+    <Content Include="robots.txt" />
     <Content Include="Sawyer_Subpage.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -376,6 +377,7 @@
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="sitemap.xml" />
     <Content Include="test.html" />
     <Content Include="videos\.htaccess" />
     <Content Include="videos\20160128_151643.oggtheora.ogv" />
